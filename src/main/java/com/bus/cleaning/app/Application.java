@@ -27,19 +27,28 @@ import com.bus.cleaning.service.DuplicateService;
 
 public class Application {
 
-    private static final Logger logger = LogManager.getLogger(Application.class);
+    private static final Logger logger =
+            LogManager.getLogger(Application.class);
 
     public static void main(String[] args) throws Exception {
 
         AppConfig cfg = AppConfig.load();
-        logger.info("JOB STARTED");
+        logger.info("==================================");
+        logger.info("BUS CLEANING JOB STARTED");
+        logger.info("==================================");
 
+        // ==============================
+        // STEP 1: READ RAW DATA
+        // ==============================
         BookingReader reader = new CsvBookingReader();
         BookingWriter writer = new CsvBookingWriter();
 
         List<Booking> all = reader.readAll(cfg.inputPath);
         logger.info("Total records read: {}", all.size());
 
+        // ==============================
+        // STEP 2: CLEANING PIPELINE
+        // ==============================
         CleaningPipeline pipeline = new CleaningPipeline(Arrays.asList(
                 new NameNormalizationRule(),
                 new NumericValidationRule(),
@@ -54,46 +63,73 @@ public class Application {
 
         for (Booking b : all) {
             pipeline.process(b);
-            if (b.valid) valid.add(b);
-            else invalid.add(b);
+            if (b.valid)
+                valid.add(b);
+            else
+                invalid.add(b);
         }
 
         logger.info("Valid before de-dup: {}", valid.size());
-        logger.info("Rejected: {}", invalid.size());
+        logger.info("Rejected records: {}", invalid.size());
 
+        // ==============================
+        // STEP 3: REMOVE DUPLICATES
+        // ==============================
         DuplicateService dup = new DuplicateService();
         List<Booking> uniqueValid = dup.removeDuplicates(valid);
 
         logger.info("Valid after de-dup: {}", uniqueValid.size());
 
-        // Save to DB if enabled (you already said DB works)
+        // ==============================
+        // STEP 4: SAVE TO DATABASE
+        // ==============================
         if (cfg.dbEnabled) {
-            DbBookingRepository dbRepo = new DbBookingRepository();
-            dbRepo.saveAll(cfg, uniqueValid);
-            logger.info("Saved cleaned data to DB.");
+
+            logger.info("DB ENABLED - Saving records");
+
+            // Booking table
+            DbBookingRepository bookingRepo =
+                    new DbBookingRepository();
+
+            bookingRepo.saveAll(cfg, uniqueValid);
+
+            // Aggregation
+            AggregationService aggService =
+                    new AggregationService();
+
+            List<AggregationService.AggregationRow> rows =
+                    aggService.routeWiseSummary(uniqueValid);
+
+            AggregationDbRepository aggRepo =
+                    new AggregationDbRepository();
+
+            aggRepo.saveAll(cfg, rows);
+
+            logger.info("Database operations completed successfully");
         }
 
-        // Write CSV outputs
+        // ==============================
+        // STEP 5: WRITE OUTPUT FILES
+        // ==============================
         writer.writeCleaned(cfg.cleanedPath, uniqueValid);
         writer.writeRejected(cfg.rejectedPath, invalid);
 
-        // Aggregation (Use Case 9)
-        AggregationService agg = new AggregationService();
-        List<AggregationService.AggregationRow> rows = agg.routeWiseSummary(uniqueValid);
+        // Aggregation CSV
+        AggregationService aggService =
+                new AggregationService();
+
+        List<AggregationService.AggregationRow> rows =
+                aggService.routeWiseSummary(uniqueValid);
+
         writer.writeAggregation(cfg.aggregationPath, rows);
-        
-        //stored in db
-        if (cfg.dbEnabled) {
-            AggregationDbRepository aggRepo = new AggregationDbRepository();
-            aggRepo.saveAll(cfg, rows);
-            logger.info("Aggregation saved to DB.");
-        }
 
         logger.info("Files generated:");
         logger.info(" - {}", cfg.cleanedPath);
         logger.info(" - {}", cfg.rejectedPath);
         logger.info(" - {}", cfg.aggregationPath);
 
-        logger.info("JOB COMPLETED ✅");
+        logger.info("==================================");
+        logger.info("BUS CLEANING JOB COMPLETED SUCCESSFULLY");
+        logger.info("==================================");
     }
 }
