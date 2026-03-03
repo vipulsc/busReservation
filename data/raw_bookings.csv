@@ -1,0 +1,201 @@
+BookingID,PassengerName,Age,Gender,BusCode,RouteCode,TravelDate,Fare,Status
+1001,Sunil Patel,-5,f,B05,RT2,17/04/24,abc,CANCELLED
+1002,Priya Shah,,F,B02,RT2,09-04-2024,abc,CONF
+1003,Mohan Mehta,58,m,B03,RT6,13-04-2024,abc,confirmed
+1004,  NEHA MEHTA  ,-5,m,B06,RT6,2024/04/14,654,CONF
+1005,Anjali Patel,39,f,B06,RT3,2024-04-24,689,CONFIRMED
+1006,Deepa Singh,,f,B06,RT6,01-04-2024,-700,Cancelled
+1007,Anjali Malhotra,150,F,B01,RT3,20-04-2024,406,Cancelled
+1008,Priyanka Verma,,f,B02,RT2,2024-05-26,abc,CONF
+1009,Kavita Malhotra,37,f,B04,RT3,27/05/24,abc,CANCELLED
+1010,Alok Sharma,twenty,M,B01,RT6,2024/05/10,480,CONF
+1011,Ramesh Verma,-5,f,B04,RT6,18-05-2024,674,Confirm
+1012,Mehul Yadav,58,F,B03,RT5,2024/05/25,abc,CANCELLED
+1013,Alok Jain,150,m,B04,RT5,2024/05/04,-700,confirmed
+1014,  MEENA GUPTA  ,,f,B05,RT5,2024/05/20,abc,confirmed
+1015,Mehul Malhotra,,f,B01,RT5,01/05/24,566,CONFIRMED
+1016,Sunil Gupta,,m,B06,RT2,12-05-2024,405,Confirm
+1017,Ashok Arora,,f,B01,RT4,04/05/24,676,confirm
+1018,Neha Verma,29,f,B06,RT3,2024/04/16,abc,Confirm
+1019,,-5,M,B04,RT3,06-04-2024,436,Cancelled
+1020,Rahul Patel,150,m,B03,RT5,12-05-2024,-700,CONFIRMED
+1021,Divya Verma,150,F,B05,RT4,2024-04-25,abc,confirmed
+1022,Mohan Das,24,M,B06,RT1,2024-04-10,abc,CANCELLED
+1023,Arjun Das,twenty,F,B06,RT6,2024/04/10,abc,confirmed
+1024,Sunil Gupta,twenty,F,B06,RT3,07-05-2024,525,Cancelled
+1025,Neeraj Mehta,55,m,B01,RT5,25/04/24,abc,CONFIRMED
+1026,Nitin Sharma,28,m,B05,RT5,2024-05-03,abc,CONF
+1027,Rahul Verma,44,m,B02,RT4,19-04-2024,abc,confirm
+1028,  ANKIT MALHOTRA  ,twenty,f,B06,RT6,2024/04/21,abc,CANCELLED
+1029,Rohit Patel,43,m,B02,RT5,2024/04/16,abc,confirmed
+1030,Divya Malhotra@123,,m,B06,RT2,2024/04/25,abc,confirmed
+1031,Rohit Singh,twenty,f,B05,RT6,2024-04-21,685,cnf
+1032,Mohan Jain,,m,B01,RT2,2024-04-25,-700,CONFIRMED
+1033,Karan Das,,F,B06,RT2,18-05-2024,534,CONFIRMED
+1034,Sakshi Mehta,-5,M,B03,RT5,2024/05/22,626,Cancelled
+1035,  AMIT SHARMA  ,,m,B04,RT5,01-04-2024,-700,Cancelled
+1036,Alok Malhotra,twenty,M,B06,RT3,30-04-2024,-700,Cancelled
+1037,Divya Arora,-5,F,B02,RT2,13-04-2024,-700,cnf
+1038,Neeraj Mehta,32,f,B04,RT3,2024-05-21,605,Confirm
+1039,Mohan Gupta,-5,F,B01,RT1,27/04/24,abc,Confirm
+1040,  NEHA VERMA  ,50,m,B02,RT3,20-04-2024,-700,Cancelled
+1041,Payal Shah,twenty,m,B05,RT5,30/05/24,562,Cancelled
+1042,Neha Das,twenty,m,B02,RT3,25/05/24,abc,Cancelled
+1043,Priya Arora,,m,B02,RT3,21/04/24,abc,confirmed
+1044,Aarti Jain@123,150,M,B01,RT6,27-05-2024,533,Cancelled
+1045,Simran Das,150,F,B01,RT5,2024-05-09,-700,cnf
+1046,Neeraj Yadav,twenty,m,B05,RT1,26-04-2024,abc,Confirm
+1047,Simran Shah,150,m,B04,RT4,22/05/24,-700,CONFIRMED
+1048,Sakshi Singh,-5,f,B03,RT6,14-04-2024,abc,cnf
+1049,Rahul Patel,35,M,B02,RT4,2024-04-20,-700,cnf
+1050,Payal Patel,twenty,F,B05,RT6,27/05/24,490,Confirm
+1051,Vivek Malhotra,-5,f,B02,RT2,24-05-2024,415,CANCELLED
+1052,Nitin Verma,,M,B06,RT1,2024-05-03,abc,confirm
+1053,Priya Verma,150,F,B01,RT5,2024/05/03,487,Cancelled
+1054,Priya Kapoor,-5,M,B01,RT5,26/04/24,563,Confirm
+1055,Alok Yadav,45,m,B06,RT1,10/04/24,abc,Cancelled
+1056,Alok Singh,twenty,f,B06,RT6,2024/04/22,-700,Cancelled
+1057,Rohit Singh,,m,B05,RT2,2024/04/12,-700,Cancelled
+1058,Alok Singh,-5,M,B02,RT1,2024/05/22,-700,Cancelled
+1059,Lata Verma@123,49,F,B01,RT5,2024/04/03,-700,Confirm
+1060,Priyanka Das,-5,f,B01,RT3,2024-04-25,abc,Confirm
+1061,Ramesh Singh,150,M,B05,RT5,2024/04/26,566,confirm
+1062,Ritu Sharma,twenty,F,B05,RT4,29-05-2024,abc,CANCELLED
+1063,Suresh Sharma,150,M,B05,RT5,2024-05-06,abc,CANCELLED
+1064,Divya Sharma,,f,B04,RT6,2024/05/05,abc,confirmed
+1065,Deepa Gupta@123,150,m,B04,RT1,2024/04/26,abc,CONF
+1066,Vikas Yadav,150,M,B03,RT4,2024-05-08,679,CONFIRMED
+1067,Simran Kapoor,twenty,F,B05,RT3,04/05/24,472,Cancelled
+1068,Ankit Jain,29,F,B01,RT4,2024-04-18,529,CONF
+1069,Prakash Yadav,,m,B02,RT6,21-04-2024,-700,confirm
+1070,Sneha Patel,43,M,B03,RT4,2024-05-04,abc,cnf
+1071,Anjali Patel,twenty,F,B04,RT5,2024/04/21,-700,cnf
+1072,Rohit Gupta,-5,M,B04,RT6,2024/05/09,424,Confirm
+1073,Anita Singh,150,m,B04,RT6,2024/04/20,abc,CANCELLED
+1074,Alok Singh,60,f,B01,RT3,2024/05/20,511,CANCELLED
+1075,Neha Singh,,m,B02,RT6,2024-05-30,abc,confirm
+1076,Anjali Singh,150,F,B02,RT2,2024/04/17,-700,CANCELLED
+1077,Ashok Singh,20,M,B02,RT3,2024/05/26,abc,confirm
+1078,Aarti Shah,49,f,B04,RT4,29-04-2024,527,confirmed
+1079,Reena Das,-5,m,B04,RT4,2024-05-01,abc,Confirm
+1080,Sneha Shah,60,f,B02,RT5,2024/04/27,500,Confirm
+1081,Raj Shah,,M,B03,RT1,2024-05-29,-700,CONF
+1082,Vivek Kumar,150,f,B05,RT5,09/04/24,abc,CANCELLED
+1083,Neeraj Malhotra,,m,B06,RT5,2024-05-08,-700,Cancelled
+1084,Raj Malhotra,150,M,B05,RT3,2024-04-02,abc,CONFIRMED
+1085,Neeraj Sharma,twenty,M,B04,RT6,29-05-2024,465,CONF
+1086,Nitin Mehta,50,f,B01,RT5,2024/04/19,623,CANCELLED
+1087,Ramesh Shah,20,M,B02,RT3,21-04-2024,471,CONF
+1088,Ramesh Singh,150,F,B03,RT2,25-05-2024,abc,cnf
+1089,,150,m,B06,RT2,2024/05/13,-700,cnf
+1090,Raj Arora,150,m,B04,RT3,2024-05-06,abc,Confirm
+1091,Ramesh Yadav,28,F,B01,RT2,2024-05-20,-700,Cancelled
+1092,Arjun Gupta,,F,B05,RT5,2024-05-27,-700,Cancelled
+1093,Alok Yadav,-5,F,B04,RT3,07-05-2024,-700,confirm
+1094,Vivek Shah,twenty,f,B05,RT5,04-04-2024,abc,Confirm
+1095,Sneha Gupta,-5,F,B01,RT6,19/04/24,-700,CONFIRMED
+1096,Nitin Patel,150,F,B01,RT3,2024/05/04,abc,CONFIRMED
+1097,,-5,m,B04,RT3,2024/04/01,abc,Confirm
+1098,Sunil Patel,twenty,f,B02,RT2,2024/05/12,-700,Confirm
+1099,Sneha Sharma,-5,m,B02,RT2,30/05/24,480,confirmed
+1100,Nitin Kumar,,M,B06,RT2,2024-04-25,681,Confirm
+1101,Kavita Singh,21,M,B03,RT3,28/04/24,abc,CONFIRMED
+1102,Priya Shah,150,F,B03,RT5,2024-05-15,635,CANCELLED
+1103,Payal Jain,38,F,B01,RT1,2024-05-01,abc,Cancelled
+1104,  SNEHA KAPOOR  ,150,f,B02,RT3,2024/04/19,-700,Cancelled
+1105,Sneha Kapoor@123,-5,F,B02,RT4,2024-05-09,abc,CONF
+1106,  SURESH SHAH  ,43,m,B03,RT4,2024-04-22,479,CANCELLED
+1107,Nitin Kapoor@123,150,M,B04,RT3,2024-04-15,420,confirm
+1108,Aarti Verma,42,f,B03,RT2,08/04/24,abc,confirmed
+1109,Rohit Verma,21,M,B01,RT4,2024-05-11,597,Cancelled
+1110,Mehul Verma@123,150,M,B05,RT2,2024/04/10,abc,CONFIRMED
+1111,,twenty,F,B04,RT5,07-04-2024,579,CONFIRMED
+1112,Rohit Singh,31,M,B03,RT2,06/04/24,-700,CANCELLED
+1113,Simran Patel,150,F,B02,RT5,25/05/24,abc,CANCELLED
+1114,Pooja Kapoor,55,F,B06,RT1,2024-04-20,499,CANCELLED
+1115,,,M,B06,RT5,14-05-2024,597,Confirm
+1116,  ARJUN GUPTA  @123,150,m,B06,RT1,13-05-2024,-700,Confirm
+1117,Pooja Shah,33,f,B06,RT5,28-04-2024,abc,CANCELLED
+1118,  NITIN YADAV  ,-5,M,B04,RT6,25-05-2024,-700,confirmed
+1119,Ramesh Gupta,twenty,F,B02,RT1,27-05-2024,-700,cnf
+1120,Sachin Mehta,twenty,F,B02,RT4,2024/05/10,464,Confirm
+1121,Divya Kapoor,-5,F,B02,RT5,2024/04/10,492,cnf
+1122,Neha Arora,-5,m,B03,RT1,2024/05/15,abc,CONFIRMED
+1123,Aarti Malhotra,twenty,m,B05,RT2,19/04/24,-700,CANCELLED
+1124,Vivek Arora,-5,f,B06,RT3,2024-05-28,521,CANCELLED
+1125,Amit Mehta,150,f,B03,RT1,2024/04/15,abc,confirmed
+1126,Prakash Kapoor,,M,B02,RT3,2024/05/24,abc,CONFIRMED
+1127,Sakshi Gupta,twenty,M,B03,RT5,2024/04/12,660,CONFIRMED
+1128,  DIVYA SHAH  ,twenty,m,B05,RT4,2024/04/28,528,CONF
+1129,Pooja Kumar,150,M,B06,RT6,2024-05-14,abc,CONF
+1130,  SUNIL MEHTA  ,150,m,B05,RT5,02/05/24,560,confirm
+1131,Sunil Kapoor,,M,B04,RT3,2024-04-27,-700,CANCELLED
+1132,Sunil Patel,41,m,B04,RT4,2024/04/25,549,Cancelled
+1133,  PRIYANKA KUMAR  ,-5,M,B04,RT5,23-05-2024,492,Cancelled
+1134,Priya Mehta,150,M,B01,RT6,2024-04-23,-700,confirm
+1135,Ashok Das,,M,B01,RT1,14/05/24,-700,Cancelled
+1136,Alok Shah,25,m,B01,RT6,2024/04/21,abc,CANCELLED
+1137,Ankit Malhotra,150,f,B01,RT5,2024/04/19,-700,confirmed
+1138,Rohit Malhotra,-5,F,B06,RT3,2024/04/24,-700,cnf
+1139,Neeraj Gupta,twenty,f,B01,RT6,07/05/24,abc,Cancelled
+1140,Simran Das,150,f,B03,RT6,21/04/24,-700,Confirm
+1141,Ankit Jain,36,M,B04,RT2,2024-05-21,abc,CONF
+1142,Vivek Gupta,,F,B01,RT4,2024-05-01,-700,CONFIRMED
+1143,Simran Malhotra,twenty,M,B04,RT3,2024/05/08,abc,cnf
+1144,Raj Kumar,twenty,M,B01,RT6,2024/05/16,630,cnf
+1145,Kavita Verma,33,M,B03,RT2,04-05-2024,-700,Cancelled
+1146,Simran Das,47,M,B05,RT5,2024-05-09,-700,CONF
+1147,Suresh Gupta@123,53,M,B05,RT2,17-05-2024,abc,confirm
+1148,  SACHIN ARORA  ,,m,B05,RT6,11-04-2024,abc,confirmed
+1149,Neha Malhotra,27,m,B02,RT1,2024-04-06,abc,CANCELLED
+1150,Raj Kapoor,twenty,M,B02,RT4,05-04-2024,628,confirm
+1151,Reena Gupta,,F,B01,RT1,04-05-2024,-700,CONFIRMED
+1152,Raj Sharma,150,f,B02,RT5,23-04-2024,407,CONFIRMED
+1153,Anita Sharma,54,F,B06,RT6,19/05/24,-700,cnf
+1154,Sunil Patel,twenty,m,B04,RT2,19-04-2024,478,confirm
+1155,Sneha Yadav,150,M,B01,RT4,14-05-2024,-700,confirm
+1156,Payal Arora,150,M,B05,RT2,17-05-2024,abc,confirm
+1157,,,f,B01,RT6,27-04-2024,-700,CONFIRMED
+1158,Deepa Das,28,F,B02,RT2,12-05-2024,abc,Cancelled
+1159,Manoj Kumar,,F,B03,RT2,2024-04-18,493,Confirm
+1160,Ankit Gupta,twenty,m,B02,RT5,2024/05/01,abc,CANCELLED
+1161,Nitin Sharma,,m,B04,RT2,26-05-2024,abc,Confirm
+1162,Anjali Shah,-5,f,B03,RT1,2024-04-30,-700,Confirm
+1163,  MEHUL PATEL  ,150,m,B06,RT5,2024/04/02,abc,CANCELLED
+1164,Sunil Patel,,f,B02,RT6,29-04-2024,abc,CANCELLED
+1165,Prakash Yadav,-5,F,B03,RT2,2024-04-24,604,Confirm
+1166,Priyanka Singh,150,F,B06,RT5,2024-04-22,-700,Cancelled
+1167,Kavita Malhotra,150,F,B06,RT2,2024/04/04,688,CONF
+1168,Rohit Malhotra,twenty,F,B04,RT5,05-05-2024,abc,confirmed
+1169,Anjali Yadav,150,M,B05,RT2,2024/05/12,abc,CANCELLED
+1170,Simran Verma,,M,B06,RT6,2024-05-02,abc,CONF
+1171,Neha Jain,-5,f,B02,RT4,2024/04/05,487,Cancelled
+1172,Simran Gupta,,m,B04,RT3,2024/05/23,abc,confirmed
+1173,Pooja Shah,,f,B05,RT1,2024/04/07,-700,confirm
+1174,Nitin Jain,,m,B01,RT2,23/05/24,589,confirm
+1175,Alok Shah,,F,B01,RT4,2024-04-19,457,CONF
+1176,Gaurav Arora,-5,f,B05,RT3,20/05/24,abc,confirmed
+1177,Prakash Jain,,f,B03,RT5,19-04-2024,abc,CANCELLED
+1178,Payal Malhotra,-5,F,B05,RT3,07-05-2024,465,CANCELLED
+1179,Meena Yadav,twenty,F,B05,RT1,2024/04/19,-700,Confirm
+1180,Anita Das,43,f,B01,RT3,2024-04-10,628,confirmed
+1181,Anita Malhotra,-5,m,B05,RT3,16-05-2024,534,CONF
+1182,  VIKAS DAS  ,,f,B03,RT1,23/05/24,abc,Cancelled
+1183,Neha Verma,,m,B03,RT5,13-04-2024,abc,confirmed
+1184,  KAVITA SINGH  ,150,m,B06,RT1,2024/05/16,-700,cnf
+1185,  RITU ARORA  ,48,F,B02,RT4,2024/05/26,abc,CONFIRMED
+1186,Kavita Malhotra,twenty,F,B02,RT5,2024-05-29,-700,Cancelled
+1187,Ritu Shah,-5,F,B01,RT6,2024-05-07,649,confirmed
+1188,  PRIYANKA MEHTA  ,150,F,B05,RT1,07/04/24,-700,Cancelled
+1189,Divya Das,,M,B01,RT5,14/04/24,422,CONFIRMED
+1190,Lata Shah,,M,B03,RT5,2024/05/24,abc,CONF
+1191,Prakash Jain,150,f,B06,RT5,2024/04/23,614,CONFIRMED
+1192,Sneha Kumar,59,M,B04,RT6,26-04-2024,441,Cancelled
+1193,Karan Malhotra,27,M,B05,RT5,30/04/24,abc,CONFIRMED
+1194,Mehul Gupta,33,m,B02,RT6,2024/04/07,abc,Confirm
+1195,Neeraj Gupta,150,M,B04,RT6,28-05-2024,437,Cancelled
+1196,Rahul Sharma,150,f,B06,RT4,2024/05/05,626,Confirm
+1197,Mohan Sharma,150,F,B06,RT4,2024-04-23,-700,confirmed
+1198,Reena Yadav,,f,B01,RT6,2024-04-08,abc,Confirm
+1199,Aarti Kapoor,52,F,B01,RT4,07/05/24,abc,confirm
+1200,Mehul Gupta,-5,f,B06,RT3,21-04-2024,605,Confirm

@@ -1,0 +1,15 @@
+BookingID,PassengerName,Age,Gender,BusCode,RouteCode,TravelDate,Fare,Status,RouteName,AgeCategory,FareCategory
+1005,Anjali Patel,39,f,B06,RT3,2024-04-24,689,CONFIRMED,Bangalore-Chennai,Adult,High
+1038,Neeraj Mehta,32,f,B04,RT3,2024-05-21,605,CONFIRMED,Bangalore-Chennai,Adult,High
+1068,Ankit Jain,29,F,B01,RT4,2024-04-18,529,CONFIRMED,Hyderabad-Goa,Adult,Medium
+1074,Alok Singh,60,f,B01,RT3,2024-05-20,511,CANCELLED,Bangalore-Chennai,Adult,Medium
+1078,Aarti Shah,49,f,B04,RT4,2024-04-29,527,CONFIRMED,Hyderabad-Goa,Adult,Medium
+1080,Sneha Shah,60,f,B02,RT5,2024-04-27,500,CONFIRMED,Kolkata-Patna,Adult,Medium
+1086,Nitin Mehta,50,f,B01,RT5,2024-04-19,623,CANCELLED,Kolkata-Patna,Adult,High
+1087,Ramesh Shah,20,M,B02,RT3,2024-04-21,471,CONFIRMED,Bangalore-Chennai,Adult,Low
+1106,Suresh Shah,43,m,B03,RT4,2024-04-22,479,CANCELLED,Hyderabad-Goa,Adult,Low
+1109,Rohit Verma,21,M,B01,RT4,2024-05-11,597,CANCELLED,Hyderabad-Goa,Adult,Medium
+1114,Pooja Kapoor,55,F,B06,RT1,2024-04-20,499,CANCELLED,Delhi-Jaipur,Adult,Low
+1132,Sunil Patel,41,m,B04,RT4,2024-04-25,549,CANCELLED,Hyderabad-Goa,Adult,Medium
+1180,Anita Das,43,f,B01,RT3,2024-04-10,628,CONFIRMED,Bangalore-Chennai,Adult,High
+1192,Sneha Kumar,59,M,B04,RT6,2024-04-26,441,CANCELLED,Ahmedabad-Surat,Adult,Low

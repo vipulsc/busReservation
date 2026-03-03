@@ -1,0 +1,6 @@
+RouteName,TotalBookings,TotalRevenue,ConfirmedCount,CancelledCount
+Bangalore-Chennai,5,2904.0,4,1
+Hyderabad-Goa,5,2681.0,2,3
+Kolkata-Patna,2,1123.0,1,1
+Delhi-Jaipur,1,499.0,0,1
+Ahmedabad-Surat,1,441.0,0,1
