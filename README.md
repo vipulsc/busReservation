@@ -167,6 +167,56 @@ Unknown codes produce a rejection reason `UnknownRouteCode`.
 
 ---
 
+## SonarQube (Code Quality)
+
+Code analysis is configured in `pom.xml` (`sonar.projectKey`, `sonar.host.url`). Run SonarQube via Docker, then execute the analysis **from the project root directory**.
+
+**Start SonarQube (Docker):**
+
+```bash
+docker run -d --name sonarqube -p 9000:9000 sonarqube:lts
+```
+
+- **URL:** http://localhost:9000 (default login: `admin` / `admin`; you’ll be prompted to change the password on first use).
+
+**Run analysis (must be run from the project directory, e.g. `busReservation/`):**
+
+```bash
+cd /path/to/busReservation
+mvn clean test sonar:sonar
+```
+
+Results are sent to the SonarQube server. Open http://localhost:9000 to view the project dashboard.
+
+---
+
+## Nexus (Artifact Repository)
+
+The project’s `pom.xml` includes `distributionManagement` for deploying artifacts to Nexus (releases and snapshots). Run Nexus via Docker and use the generated admin password for first login.
+
+**Start Nexus (Docker):**
+
+```bash
+docker run -d --name nexus -p 8081:8081 sonatype/nexus3
+```
+
+- **URL:** http://localhost:8081
+
+**Get the initial admin password:**
+
+```bash
+docker exec -it nexus cat /nexus-data/admin.password
+```
+
+Use that password to log in as user `admin` at http://localhost:8081. You’ll be prompted to change it. The default repository URLs in `pom.xml` are:
+
+- **Releases:** `http://localhost:8081/repository/maven-bus/`
+- **Snapshots:** `http://localhost:8081/repository/maven-snapshots/`
+
+Adjust these in `pom.xml` or in Nexus if your setup uses different hosts/ports or repository names.
+
+---
+
 ## Tech Stack
 
 - **Java 8**
@@ -174,6 +224,8 @@ Unknown codes produce a rejection reason `UnknownRouteCode`.
 - **Log4j 2** – Logging
 - **MySQL Connector/J 8** – Optional DB
 - **JUnit 5** – Unit tests
+- **SonarQube** – Code quality (optional; run via Docker)
+- **Nexus 3** – Artifact repository (optional; run via Docker)
 
 ---
 
