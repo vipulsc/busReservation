@@ -1,0 +1,182 @@
+# Bus Reservation – Data Cleaning Pipeline
+
+A Java application that reads raw bus booking data from CSV, validates and cleans it through a configurable pipeline, removes duplicates, and outputs cleaned records, rejected records, and route-wise aggregation. Optionally persists results to MySQL.
+
+---
+
+## Features
+
+- **CSV ingestion** – Read bookings from a CSV file (configurable path).
+- **Cleaning pipeline** – Six rules run in sequence:
+  - **Name normalization** – Trim, proper case, letters/spaces only.
+  - **Numeric validation** – Age (0–100), fare (non-negative), parse checks.
+  - **Date standardization** – Multiple input formats → `yyyy-MM-dd`.
+  - **Status normalization** – CONFIRMED/CNF/CONF → CONFIRMED; CANCELLED/CANCEL → CANCELLED.
+  - **Code mapping** – Route codes (e.g. RT1–RT6) mapped to route names.
+  - **Derived fields** – Age category (Minor/Adult/Senior), fare category (Low/Medium/High).
+- **Duplicate removal** – By booking ID, or by composite key (name, bus, route, date) when ID is missing.
+- **Outputs** – Cleaned CSV, rejected CSV (with reasons), and aggregation CSV (route-wise summary).
+- **Optional database** – Store cleaned bookings and aggregation in MySQL when enabled.
+- **Tests** – JUnit 5 unit tests for model, rules, services, and CSV read/write.
+
+---
+
+## Prerequisites
+
+- **Java 8** or higher  
+- **Maven 3.6+**  
+- (Optional) **MySQL 8** if you enable database persistence  
+
+---
+
+## Project Structure
+
+```
+busReservation/
+├── pom.xml
+├── README.md
+├── src/
+│   ├── main/
+│   │   ├── java/com/bus/cleaning/
+│   │   │   ├── app/Application.java          # Entry point
+│   │   │   ├── config/AppConfig.java, DbConfig.java
+│   │   │   ├── model/Booking.java
+│   │   │   ├── repository/                   # CSV & DB read/write
+│   │   │   │   ├── BookingReader.java, BookingWriter.java
+│   │   │   │   ├── CsvBookingReader.java, CsvBookingWriter.java
+│   │   │   │   ├── DbBookingRepository.java, AggregationDbRepository.java
+│   │   │   │   └── SchemaInitializer.java
+│   │   │   ├── rules/                        # Cleaning rules
+│   │   │   │   ├── CleaningRule.java
+│   │   │   │   ├── NameNormalizationRule.java, NumericValidationRule.java
+│   │   │   │   ├── DateStandardizationRule.java, StatusNormalizationRule.java
+│   │   │   │   ├── CodeMappingRule.java, DerivedFieldsRule.java
+│   │   │   └── service/
+│   │   │       ├── CleaningPipeline.java, DuplicateService.java
+│   │   │       └── AggregationService.java
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
+│       └── java/com/bus/cleaning/            # JUnit 5 tests
+│           ├── model/BookingTest.java
+│           ├── rules/*Test.java
+│           ├── service/*Test.java
+│           └── repository/CsvBookingReaderTest.java, CsvBookingWriterTest.java
+├── data/                                     # Put raw_bookings.csv here
+└── output/                                   # Generated CSVs
+```
+
+---
+
+## Configuration
+
+Edit `src/main/resources/application.properties`:
+
+| Property | Description | Example |
+|----------|-------------|---------|
+| `input.path` | Path to input CSV | `data/raw_bookings.csv` |
+| `output.cleaned` | Path for cleaned records | `output/cleaned.csv` |
+| `output.rejected` | Path for rejected records (with reason) | `output/rejected.csv` |
+| `output.aggregation` | Path for route-wise summary | `output/aggregation.csv` |
+| `db.enabled` | Use MySQL for persistence | `true` or `false` |
+| `db.url` | JDBC URL | `jdbc:mysql://host:port/dbname` |
+| `db.username` | Database user | `root` |
+| `db.password` | Database password | (your password) |
+
+Example (database disabled):
+
+```properties
+input.path=data/raw_bookings.csv
+output.cleaned=output/cleaned.csv
+output.rejected=output/rejected.csv
+output.aggregation=output/aggregation.csv
+db.enabled=false
+```
+
+---
+
+## Input CSV Format
+
+The input file must have a header row and at least 9 columns per data row. Rows with fewer than 9 columns are skipped.
+
+| Column index | Field | Description |
+|--------------|--------|-------------|
+| 0 | BookingID | Unique or empty |
+| 1 | PassengerName | Letters and spaces (normalized to proper case) |
+| 2 | Age | Integer 0–100 |
+| 3 | Gender | Any (passed through) |
+| 4 | BusCode | Any (passed through) |
+| 5 | RouteCode | e.g. RT1–RT6 (mapped to route names) |
+| 6 | TravelDate | dd/MM/yy, dd-MM-yyyy, yyyy/MM/dd, or yyyy-MM-dd |
+| 7 | Fare | Non-negative number |
+| 8 | Status | CONFIRMED/CNF/CONF or CANCELLED/CANCEL/CANCELED |
+
+Example header and one row:
+
+```csv
+BookingID,PassengerName,Age,Gender,BusCode,RouteCode,TravelDate,Fare,Status
+B001,john doe,25,M,BUS1,RT1,15/06/24,500,CONFIRMED
+```
+
+---
+
+## Build and Run
+
+**Build:**
+
+```bash
+mvn clean compile
+```
+
+**Run (from project root):**
+
+```bash
+mvn exec:java -Dexec.mainClass="com.bus.cleaning.app.Application"
+```
+
+Or run the `Application` main class from your IDE. Ensure `data/raw_bookings.csv` exists (or set `input.path` to your file).
+
+**Run tests:**
+
+```bash
+mvn test
+```
+
+---
+
+## Output Files
+
+- **Cleaned CSV** – Valid records after cleaning and de-duplication. Columns include original fields plus RouteName, AgeCategory, FareCategory.
+- **Rejected CSV** – Invalid records with an extra `Reason` column (e.g. InvalidAgeFormat, MissingName, InvalidStatus).
+- **Aggregation CSV** – Route-wise summary: RouteName, TotalBookings, TotalRevenue, ConfirmedCount, CancelledCount (sorted by revenue descending).
+
+---
+
+## Route Code Mapping
+
+| Code | Route name |
+|------|------------|
+| RT1 | Delhi-Jaipur |
+| RT2 | Mumbai-Pune |
+| RT3 | Bangalore-Chennai |
+| RT4 | Hyderabad-Goa |
+| RT5 | Kolkata-Patna |
+| RT6 | Ahmedabad-Surat |
+
+Unknown codes produce a rejection reason `UnknownRouteCode`.
+
+---
+
+## Tech Stack
+
+- **Java 8**
+- **Maven**
+- **Log4j 2** – Logging
+- **MySQL Connector/J 8** – Optional DB
+- **JUnit 5** – Unit tests
+
+---
+
+## License
+
+This project is for internal/sprint use. Adjust license as needed for your organization.
