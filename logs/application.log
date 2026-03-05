@@ -4088,3 +4088,55 @@
 2026-03-02 15:11:26 INFO  com.bus.cleaning.app.Application - ==================================
 2026-03-02 15:11:26 INFO  com.bus.cleaning.app.Application - BUS CLEANING JOB COMPLETED SUCCESSFULLY
 2026-03-02 15:11:26 INFO  com.bus.cleaning.app.Application - ==================================
+2026-03-05 17:00:13 INFO  com.bus.cleaning.repository.CsvBookingWriter - Rejected file written: /var/folders/g4/kcf206254wnfx6fchzxq3s9w0000gn/T/junit7898304054662244101/rejected.csv | rows=1
+2026-03-05 17:00:13 INFO  com.bus.cleaning.repository.CsvBookingWriter - Aggregation file written: /var/folders/g4/kcf206254wnfx6fchzxq3s9w0000gn/T/junit760712824384791138/agg.csv | rows=2
+2026-03-05 17:00:13 INFO  com.bus.cleaning.repository.CsvBookingWriter - Cleaned file written: /var/folders/g4/kcf206254wnfx6fchzxq3s9w0000gn/T/junit16071180566701229031/subdir/cleaned.csv | rows=1
+2026-03-05 17:00:13 INFO  com.bus.cleaning.repository.CsvBookingWriter - Cleaned file written: /var/folders/g4/kcf206254wnfx6fchzxq3s9w0000gn/T/junit17020836185956186769/empty.csv | rows=0
+2026-03-05 17:00:13 WARN  com.bus.cleaning.repository.CsvBookingReader - Skipping bad row (columns < 9): short,row
+2026-03-05 17:00:13 INFO  com.bus.cleaning.repository.CsvBookingReader - CSV read completed. Records: 2
+2026-03-05 17:00:13 INFO  com.bus.cleaning.repository.CsvBookingReader - CSV read completed. Records: 2
+2026-03-05 17:00:13 INFO  com.bus.cleaning.repository.CsvBookingReader - CSV read completed. Records: 0
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.NumericValidationRule - Invalid age range for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.NumericValidationRule - Negative fare for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.NumericValidationRule - Invalid fare format for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.NumericValidationRule - Invalid age range for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.NumericValidationRule - Invalid age format for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.CodeMappingRule - Unknown routeCode=RT99 for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.CodeMappingRule - Missing routeCode for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.CodeMappingRule - Missing routeCode for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.StatusNormalizationRule - Missing status for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.StatusNormalizationRule - Missing status for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.StatusNormalizationRule - Invalid status for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.NameNormalizationRule - Missing name for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.NameNormalizationRule - Invalid name for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.NameNormalizationRule - Invalid name for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.NameNormalizationRule - Missing name for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.DateStandardizationRule - Missing date for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.DateStandardizationRule - Missing date for bookingId=null
+2026-03-05 17:00:13 WARN  com.bus.cleaning.rules.DateStandardizationRule - Invalid date format for bookingId=null
+2026-03-05 17:00:44 INFO  com.bus.cleaning.repository.CsvBookingWriter - Rejected file written: /var/folders/g4/kcf206254wnfx6fchzxq3s9w0000gn/T/junit9527890111418150653/rejected.csv | rows=1
+2026-03-05 17:00:44 INFO  com.bus.cleaning.repository.CsvBookingWriter - Aggregation file written: /var/folders/g4/kcf206254wnfx6fchzxq3s9w0000gn/T/junit16309504126468822887/agg.csv | rows=2
+2026-03-05 17:00:44 INFO  com.bus.cleaning.repository.CsvBookingWriter - Cleaned file written: /var/folders/g4/kcf206254wnfx6fchzxq3s9w0000gn/T/junit7586483887022565597/subdir/cleaned.csv | rows=1
+2026-03-05 17:00:44 INFO  com.bus.cleaning.repository.CsvBookingWriter - Cleaned file written: /var/folders/g4/kcf206254wnfx6fchzxq3s9w0000gn/T/junit4925962517727431279/empty.csv | rows=0
+2026-03-05 17:00:44 WARN  com.bus.cleaning.repository.CsvBookingReader - Skipping bad row (columns < 9): short,row
+2026-03-05 17:00:44 INFO  com.bus.cleaning.repository.CsvBookingReader - CSV read completed. Records: 2
+2026-03-05 17:00:44 INFO  com.bus.cleaning.repository.CsvBookingReader - CSV read completed. Records: 2
+2026-03-05 17:00:44 INFO  com.bus.cleaning.repository.CsvBookingReader - CSV read completed. Records: 0
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.NumericValidationRule - Invalid age range for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.NumericValidationRule - Negative fare for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.NumericValidationRule - Invalid fare format for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.NumericValidationRule - Invalid age range for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.NumericValidationRule - Invalid age format for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.CodeMappingRule - Unknown routeCode=RT99 for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.CodeMappingRule - Missing routeCode for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.CodeMappingRule - Missing routeCode for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.StatusNormalizationRule - Missing status for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.StatusNormalizationRule - Missing status for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.StatusNormalizationRule - Invalid status for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.NameNormalizationRule - Missing name for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.NameNormalizationRule - Invalid name for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.NameNormalizationRule - Invalid name for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.NameNormalizationRule - Missing name for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.DateStandardizationRule - Missing date for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.DateStandardizationRule - Missing date for bookingId=null
+2026-03-05 17:00:44 WARN  com.bus.cleaning.rules.DateStandardizationRule - Invalid date format for bookingId=null
