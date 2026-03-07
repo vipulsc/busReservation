@@ -1,6 +1,7 @@
 .settings/
-.project
-.classpath
+# Uncomment below if you prefer not to commit Eclipse project metadata (test folder may need manual "Build Path" setup)
+# .project
+# .classpath
 
 .vscode/
 

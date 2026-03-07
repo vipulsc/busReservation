@@ -142,6 +142,22 @@ Or run the `Application` main class from your IDE. Ensure `data/raw_bookings.csv
 mvn test
 ```
 
+### Test folder not visible in IntelliJ or Eclipse
+
+If `src/test/java` does not show up or is not recognized as test source:
+
+**IntelliJ IDEA**
+1. Right-click `pom.xml` → **Maven** → **Reload Project** (or use the Maven tool window refresh).
+2. If `src/test/java` still doesn’t appear: right-click `src/test/java` → **Mark Directory as** → **Test Sources Root** (folder should turn green).
+3. **File** → **Invalidate Caches / Restart** if the folder still doesn’t appear.
+
+**Eclipse**
+1. Right-click the project → **Maven** → **Update Project** (Alt+F5). Check **Force Update** if needed → **OK**.
+2. If the test folder is still missing: right-click project → **Build Path** → **Configure Build Path** → **Source** tab → **Add Folder** → select `src/test/java` → check **Apply and Close**. Ensure the folder is marked as a test source (e.g. "Test" in the list).
+3. Refresh the project: right-click project → **Refresh** (F5).
+
+The `pom.xml` defines `testSourceDirectory` as `src/test/java`, so a Maven-based import should pick it up after reload/update.
+
 ---
 
 ## Output Files

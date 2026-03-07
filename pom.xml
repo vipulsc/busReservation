@@ -38,6 +38,11 @@
 
 	</dependencies>
 
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+	</build>
+
 	<properties>
 		<sonar.projectKey>bus-cleaning</sonar.projectKey>
 		<sonar.host.url>http://localhost:9000</sonar.host.url>
