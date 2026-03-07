@@ -122,6 +122,16 @@ B001,john doe,25,M,BUS1,RT1,15/06/24,500,CONFIRMED
 
 ## Build and Run
 
+## Import in Eclipse (Maven)
+
+1. Open Eclipse.
+2. Go to **File → Import → Maven → Existing Maven Projects**.
+3. Select the project root folder (`busReservation`) that contains `pom.xml`.
+4. Finish the import.
+5. If needed, right-click project → **Maven → Update Project** (Alt+F5).
+
+This repository is Maven-first and does not require committed `.project` or `.classpath` files.
+
 **Build:**
 
 ```bash

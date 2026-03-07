@@ -1,7 +1,8 @@
-.settings/
-# Uncomment below if you prefer not to commit Eclipse project metadata (test folder may need manual "Build Path" setup)
-# .project
-# .classpath
+.settings/*
+!.settings/org.eclipse.jdt.core.prefs
+!.settings/org.eclipse.core.resources.prefs
+.project
+.classpath
 
 .vscode/
 
