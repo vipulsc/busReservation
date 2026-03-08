@@ -1,6 +1,8 @@
 # Capgemini Sprint – Bus Reservations | 5-Slide PPT Content
 
-Based on *Bus_Full.docx* (Data Cleaning & Transformation Use Cases). Copy each section into one slide. Use the flow diagram page as Slide 3 (or 4); you can redraw the diagram in PowerPoint using shapes or paste the Mermaid output as image (see note below).
+**For client presentation.** Keep each slide to a few short bullets; expand only if the client asks. Use Capgemini branding below for a consistent, on-brand deck.
+
+Based on *Bus_Full.docx* (Data Cleaning & Transformation Use Cases). Copy each section into one slide. Use the flow diagram as Slide 3; you can redraw it in PowerPoint or paste the Mermaid export as an image (see note at the end).
 
 ---
 
@@ -79,6 +81,8 @@ We delivered an end-to-end **Bus Reservations Data Pipeline** in Core Java that 
 9. **Aggregation** — Group by route/date; summary metrics.
 10. **Data Categorization** — Assign to category buckets.
 
+**Testing** — Unit tests cover the pipeline and cleaning rules; every Maven build runs the test suite so releases are validated before deploy.
+
 **Visual:** Screenshot of output files (cleaned.csv, rejected.csv, aggregation.csv) or a sample of transformed data.
 
 ---
@@ -86,6 +90,14 @@ We delivered an end-to-end **Bus Reservations Data Pipeline** in Core Java that 
 ## SLIDE 3 — Full Process Flow Diagram
 
 **Title:** End-to-End Process Flow
+
+**5 key points (use as bullets on the slide):**
+
+1. **Ingest** — Raw reservation CSV is read in full; every row is loaded for processing.
+2. **Clean & Transform** — A configurable pipeline applies 10 rules (names, dates, codes, status, numerics, derived fields, etc.) and marks each record as valid or invalid.
+3. **Split** — Valid records are separated from invalid ones; invalid rows are written to a rejected file for audit.
+4. **Deduplicate** — Duplicate records (by ID) are removed from the valid set so only unique bookings remain.
+5. **Output** — Cleaned data is written to cleaned CSV, aggregation CSV, and optionally to MySQL (booking + aggregation tables); rejected records go to rejected CSV.
 
 **Use the diagram below in one of these ways:**
 1. **PowerPoint:** Redraw using shapes (rectangles for steps, arrows between them).
@@ -203,27 +215,15 @@ flowchart LR
 
 ## SLIDE 4 — Execution & Demo
 
-**Title:** Execution – Run & Results
+**Title:** How to Run & What You Get
 
-**Screenshot 1 – Build:**
-- Terminal: `mvn clean package` (or `mvn clean compile`)
+*Keep bullets short for the client; you can run the job live if needed.*
 
-**Screenshot 2 – Run:**
-- Terminal: Run command + log lines:
-  - `BUS CLEANING JOB STARTED`
-  - `Total records read: …`
-  - `Valid before de-dup: …` / `Rejected records: …`
-  - `Valid after de-dup: …`
-  - `Database operations completed successfully` (if DB on)
-  - `BUS CLEANING JOB COMPLETED SUCCESSFULLY`
+- **Build** — Single command builds and tests the application and produces a runnable JAR.
+- **Run** — One command starts the pipeline; the console shows progress: records read, valid vs rejected, deduplication.
+- **Results** — Three output files: **Cleaned CSV** (ready for reporting), **Rejected CSV** (audit trail for invalid rows), **Aggregation CSV** (metrics by route/date). Optional: data can also be loaded into MySQL.
+- **Takeaway** — Every input record is accounted for: either in the cleaned/output set or in the rejected file with full traceability.
 
-**Screenshot 3 – Output:**
-- File explorer: `cleaned.csv`, `rejected.csv`, `aggregation.csv` (or DB rows)
-
-**Bullets:**
-- Run: `java -jar …` or `mvn exec:java` (as per your setup)
-- Input: X records → Y valid, Z rejected
-- Output: 3 CSVs (+ DB when enabled)
 
 ---
 
@@ -231,15 +231,19 @@ flowchart LR
 
 **Title:** DevOps & Release
 
-**Bullets:**
-- **Build:** Maven – `mvn clean package` / `mvn clean deploy`
-- **Artifact repository:** Nexus – `maven-snapshots` (SNAPSHOT), `maven-bus` (release)
-- **Quality:** SonarQube – project key `bus-cleaning`, analysis on build
-- **Deploy:** `mvn clean deploy` → artifacts published to Nexus
-- **Config:** `distributionManagement` in `pom.xml`; credentials in `~/.m2/settings.xml`
-- **Optional:** Nexus run via Docker (`sonatype/nexus3` on port 8081)
+*Client-facing bullets — short and benefit-focused. Use the “Presenter note” below if they ask for detail.*
 
-**Visual:** Screenshot of Nexus (Browse → maven-snapshots / maven-bus) or SonarQube project dashboard.
+- **Build** — We use **Maven** to build, test, and package the application in a single, repeatable step. Every build is consistent and traceable.
+- **Artifact repository** — **Nexus** stores every build by version. Development builds (snapshots) and release builds are kept separate so you always know which version is in use or handed over.
+- **Deploy** — One command publishes the built artifact to Nexus. Release versions go to the release repository; development versions go to the snapshot repository. No manual uploads; full audit trail.
+- **Code quality** — **SonarQube** is integrated for static analysis: code quality, test coverage, and duplication reports. Quality gates can be part of the release process.
+- **Takeaway** — Build, store, and release are automated and version-controlled; code quality is checked before release.
+
+---
+
+**Presenter note (if client asks “how”):**  
+Maven is configured with `distributionManagement` in `pom.xml` (Nexus URLs) and credentials in `~/.m2/settings.xml`. Run `mvn clean deploy` to publish; run `mvn sonar:sonar` for SonarQube. Nexus can be run locally via Docker (`sonatype/nexus3` on port 8081). Repos: **maven-snapshots** (SNAPSHOT versions), **maven-bus** (release versions).
+
 
 ---
 
@@ -247,16 +251,17 @@ flowchart LR
 
 **Title:** Summary & Next Steps
 
-**Done:**
-- End-to-end Bus Reservations data pipeline: read → clean → transform → deduplicate → DB + CSV
-- 10 cleaning & transformation rules (per use-case document); duplicate handling; aggregation
-- DevOps: Maven build, Nexus artifact repository, SonarQube integration
+**What we delivered**
+- End-to-end Bus Reservations data pipeline: ingest → clean → transform → deduplicate → outputs (CSV + optional MySQL).
+- 10 cleaning and transformation rules; duplicate handling; aggregation and full audit trail for rejected data.
+- Testing: unit tests for the pipeline and rules; tests run on every build so releases are validated.
+- DevOps: Maven build, Nexus for versioned artifacts, SonarQube for code quality.
 
-**Next (optional):**
-- CI pipeline (e.g. GitHub Actions): build → test → SonarQube → deploy to Nexus
-- Docker image for the application
+**Next (optional)**
+- CI pipeline (e.g. GitHub Actions): build → test → SonarQube → deploy to Nexus.
+- Docker image for the application for easy deployment.
 
-**Visual:** Team/sprint photo or “Thank you”.
+*Optional visual:* Team/sprint photo or “Thank you”.
 
 ---
 

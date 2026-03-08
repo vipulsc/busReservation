@@ -1,132 +1,138 @@
-# Bus Cleaning Project — Division into 6 Equal Parts
+# Bus Cleaning Project – Division into 6 Equal Parts
 
-This document divides the **bus-cleaning** project into **6 equal parts** by responsibility and scope. Each part is a self-contained work package (e.g. for sprint ownership or presentation).
+This document divides the project into **6 topic-based parts** so that:
+
+- Each part is **similar in size** (roughly equal lines of code).
+- Each part is **one clear topic** that makes sense on its own.
+- Together, the 6 parts **explain the entire project** from entry point to outputs.
 
 ---
 
 ## Summary
 
-| Part | Name                         | Files | Approx. lines | Scope                    |
-|------|------------------------------|-------|----------------|--------------------------|
-| **1** | Foundation                   | 6     | ~165           | Model, config, contract  |
-| **2** | Input/Output                 | 4     | ~147           | CSV read & write         |
-| **3** | Cleaning rules (validation)  | 3     | ~134           | Name, numeric, date      |
-| **4** | Cleaning rules (mapping)     | 4     | ~130           | Status, codes, derived, pipeline |
-| **5** | Services & orchestration     | 4     | ~261           | Duplicate, aggregation, schema, app |
-| **6** | Persistence & build          | 4     | ~296           | DB repos, Maven          |
+| Part | Topic | Files | Approx. lines | What it explains |
+|------|--------|-------|----------------|------------------|
+| **1** | Application, configuration & data model | 5 | 378 | What the app is, how it’s configured, and the core data structure |
+| **2** | Cleaning pipeline & validation rules | 7 | 384 | How the pipeline runs and how we validate/normalize names and numbers |
+| **3** | Standardization & mapping rules | 6 | 392 | How we standardize dates/status and map route codes |
+| **4** | Ingestion, derived data & writer contract | 6 | 352 | How we read data, derive fields, and define the writer interface |
+| **5** | File & database persistence | 3 | 326 | How we write CSVs and persist to the database |
+| **6** | Deduplication & aggregation services | 5 | 415 | How we remove duplicates and build route-wise summaries |
 
-**Total:** 25 items across 6 parts (~1,133 lines of code + config).
-
----
-
-## Part 1 — Foundation (Model & configuration)
-
-**Purpose:** Data model, application configuration, and the cleaning-rule contract.
-
-| File | Location | Role |
-|------|----------|------|
-| `Booking.java` | `model/` | Core domain model (fields, valid flag, rejection reasons, CSV serialization) |
-| `AppConfig.java` | `config/` | Loads input/output paths, DB toggle, DB URL/user/password from properties |
-| `DbConfig.java` | `config/` | JDBC connection creation (server-level and database-level) |
-| `CleaningRule.java` | `rules/` | Interface for all cleaning rules (`apply(Booking b)`) |
-| `application.properties` | `src/main/resources/` | Input path, output paths, DB settings |
-| `log4j2.xml` | `src/main/resources/` | Logging configuration (console + file) |
-
-**Deliverable:** Any new rule or component depends on Part 1; no cleaning logic here.
+**Total: 33 files, ~2,247 lines** (each part ~326–415 lines).
 
 ---
 
-## Part 2 — Input/Output (Read & write)
+## Part 1: Application, configuration & data model  
+**~378 lines**
 
-**Purpose:** Reading raw CSV and writing cleaned, rejected, and aggregation CSVs.
+**Topic:** The application entry point, configuration, and the core `Booking` model. This part answers: *What does this app do, how is it configured, and what is the shape of the data?*
 
-| File | Location | Role |
-|------|----------|------|
-| `BookingReader.java` | `repository/` | Interface: `List<Booking> readAll(String path)` |
-| `BookingWriter.java` | `repository/` | Interface: `writeCleaned`, `writeRejected`, `writeAggregation` |
-| `CsvBookingReader.java` | `repository/` | Reads CSV, parses rows into `Booking`, handles headers |
-| `CsvBookingWriter.java` | `repository/` | Writes cleaned.csv, rejected.csv, aggregation.csv with correct headers |
-
-**Deliverable:** All file I/O for the pipeline; no business rules.
-
----
-
-## Part 3 — Cleaning rules: normalization & validation (first batch)
-
-**Purpose:** Three rules that normalize and validate core fields (names, numbers, dates).
-
-| File | Location | Role |
-|------|----------|------|
-| `NameNormalizationRule.java` | `rules/` | Trim and proper-case passenger name; invalid → reject |
-| `NumericValidationRule.java` | `rules/` | Parse and validate age (range) and fare; invalid → reject |
-| `DateStandardizationRule.java` | `rules/` | Parse and standardize travel date to `yyyy-MM-dd`; invalid → reject |
-
-**Deliverable:** Rules 1–3 from the use-case list (duplicates handled in Part 5).
+| File | Lines | Role |
+|------|-------|------|
+| `src/main/java/.../app/Application.java` | 134 | Main entry; orchestrates read → clean → dedupe → persist → write |
+| `src/main/java/.../config/AppConfig.java` | 44 | Paths and flags (input, output, DB on/off) |
+| `src/main/java/.../config/DbConfig.java` | 30 | DB connection settings |
+| `src/main/java/.../model/Booking.java` | 59 | Core model: raw fields, cleaned fields, valid/invalidReason |
+| `src/test/java/.../model/BookingTest.java` | 111 | Unit tests for `Booking` (CSV row output, rejection reasons) |
 
 ---
 
-## Part 4 — Cleaning rules: mapping, derivation & pipeline (second batch)
+## Part 2: Cleaning pipeline & validation rules  
+**~384 lines**
 
-**Purpose:** Status/code normalization, derived fields, and the pipeline that runs all rules.
+**Topic:** The cleaning pipeline and the rules that **validate and normalize** (names and numerics). This part answers: *How does the cleaning pipeline work, and how are names and numbers validated/normalized?*
 
-| File | Location | Role |
-|------|----------|------|
-| `StatusNormalizationRule.java` | `rules/` | Map status to CONFIRMED/CANCELLED (or reject) |
-| `CodeMappingRule.java` | `rules/` | Map route code → route name (e.g. R1 → "Mumbai–Pune") |
-| `DerivedFieldsRule.java` | `rules/` | Compute age category (Minor/Adult/Senior) and fare category (Low/Medium/High) |
-| `CleaningPipeline.java` | `service/` | Holds list of `CleaningRule`; `process(Booking b)` applies each rule in order |
-
-**Deliverable:** Rules 4–8 plus the pipeline orchestrator; valid/invalid split is in `Application`.
-
----
-
-## Part 5 — Services & orchestration (dedup, aggregation, schema, main flow)
-
-**Purpose:** Deduplication, route-wise aggregation, DB schema bootstrap, and main application flow.
-
-| File | Location | Role |
-|------|----------|------|
-| `DuplicateService.java` | `service/` | Remove duplicates by booking ID (Set-based); valid list only |
-| `AggregationService.java` | `service/` | Group by route; compute total bookings, revenue, confirmed/cancelled counts |
-| `SchemaInitializer.java` | `repository/` | Ensure database exists (`CREATE DATABASE IF NOT EXISTS`) |
-| `Application.java` | `app/` | Main: load config → read CSV → run pipeline → valid/invalid split → dedup → DB (if enabled) → write CSVs |
-
-**Deliverable:** End-to-end flow, deduplication (rule 1 in use-case terms), aggregation (rule 9), and DB schema setup.
+| File | Lines | Role |
+|------|-------|------|
+| `src/main/java/.../rules/CleaningRule.java` | 6 | Interface: `void apply(Booking b)` |
+| `src/main/java/.../service/CleaningPipeline.java` | 20 | Runs a list of rules in sequence |
+| `src/main/java/.../rules/NameNormalizationRule.java` | 43 | Trim, proper case, letters/spaces only |
+| `src/main/java/.../rules/NumericValidationRule.java` | 41 | Age 0–100, fare ≥ 0, parse checks |
+| `src/test/java/.../rules/NameNormalizationRuleTest.java` | 99 | Tests for name normalization |
+| `src/test/java/.../rules/NumericValidationRuleTest.java` | 112 | Tests for numeric validation |
+| `src/test/java/.../service/CleaningPipelineTest.java` | 63 | Tests for pipeline orchestration |
 
 ---
 
-## Part 6 — Persistence & build (database + Maven)
+## Part 3: Standardization & mapping rules  
+**~392 lines**
 
-**Purpose:** Saving cleaned bookings and aggregation rows to MySQL; build and deploy configuration.
+**Topic:** Rules that **standardize** (dates, status) and **map** (route codes). This part answers: *How do we standardize dates and status, and how do we map route codes to names?*
 
-| File | Location | Role |
-|------|----------|------|
-| `DbBookingRepository.java` | `repository/` | Insert/upsert cleaned bookings into `booking` table |
-| `AggregationDbRepository.java` | `repository/` | Insert/upsert aggregation rows into `aggregation` table |
-| `pom.xml` | project root | Maven build, dependencies (Log4j2, MySQL), Nexus distributionManagement, Sonar props |
-
-**Deliverable:** All database writes and release/build setup (rule 10 “data categorization” is reflected in derived fields from Part 4).
-
----
-
-## Flow across the 6 parts
-
-```
-Part 1 (config + model)
-    ↓
-Part 2 (read CSV)  →  Part 3 + Part 4 (cleaning pipeline + rules)
-    ↓
-Part 5 (dedup + aggregation + Application orchestration)
-    ↓
-Part 2 (write CSVs)  +  Part 6 (DB + build)
-```
+| File | Lines | Role |
+|------|-------|------|
+| `src/main/java/.../rules/DateStandardizationRule.java` | 50 | Multiple date formats → `yyyy-MM-dd` |
+| `src/main/java/.../rules/StatusNormalizationRule.java` | 31 | CONFIRMED/CNF/CONF → CONFIRMED; CANCELLED/CANCEL → CANCELLED |
+| `src/main/java/.../rules/CodeMappingRule.java` | 44 | Route codes (e.g. RT1–RT6) → route names |
+| `src/test/java/.../rules/DateStandardizationRuleTest.java` | 99 | Tests for date standardization |
+| `src/test/java/.../rules/StatusNormalizationRuleTest.java` | 81 | Tests for status normalization |
+| `src/test/java/.../rules/CodeMappingRuleTest.java` | 87 | Tests for code mapping |
 
 ---
 
-## Equality note
+## Part 4: Ingestion, derived data & writer contract  
+**~352 lines**
 
-- **By responsibility:** Each part owns one major area (foundation, I/O, two rule batches, orchestration, persistence).
-- **By file count:** Parts 1–2 and 4–6 have 4 files each; Part 3 has 3 (one part with 3 rules). Resources (properties, log4j2) are counted in Part 1.
-- **By lines:** Parts 1–4 are similar in size (~130–165 lines); Parts 5 and 6 are larger (~261 and ~296) because they contain orchestration and all DB/build code. To make line counts closer, Part 5 and Part 6 could be subdivided only by splitting classes (e.g. extracting “DB bootstrap” or “Nexus/Sonar config”), which would change the current structure.
+**Topic:** **Reading** bookings from CSV, **deriving** age/fare categories, and the **writer interface**. This part answers: *How do we read raw data, derive extra fields, and what is the contract for writing?*
 
-This division gives **exactly 6 parts**, with **nothing left out** and **no overlap**: every project file is assigned to exactly one part.
+| File | Lines | Role |
+|------|-------|------|
+| `src/main/java/.../rules/DerivedFieldsRule.java` | 35 | Age category (Minor/Adult/Senior), fare category (Low/Medium/High) |
+| `src/test/java/.../rules/DerivedFieldsRuleTest.java` | 129 | Tests for derived fields |
+| `src/main/java/.../repository/BookingReader.java` | 7 | Interface: read all bookings |
+| `src/main/java/.../repository/CsvBookingReader.java` | 49 | CSV implementation of reader |
+| `src/test/java/.../repository/CsvBookingReaderTest.java` | 93 | Tests for CSV reader |
+| `src/main/java/.../repository/BookingWriter.java` | 14 | Interface: write cleaned, rejected, aggregation |
+| `src/main/java/.../repository/SchemaInitializer.java` | 25 | DB schema creation (tables for bookings & aggregation) |
+
+---
+
+## Part 5: File & database persistence  
+**~326 lines**
+
+**Topic:** **Writing** cleaned/rejected/aggregation CSVs and **persisting** to the database. This part answers: *How do we write output files and save data to MySQL?*
+
+| File | Lines | Role |
+|------|-------|------|
+| `src/main/java/.../repository/CsvBookingWriter.java` | 77 | Writes cleaned.csv, rejected.csv, aggregation.csv |
+| `src/test/java/.../repository/CsvBookingWriterTest.java` | 102 | Tests for CSV writer |
+| `src/main/java/.../repository/DbBookingRepository.java` | 147 | Saves cleaned bookings to MySQL |
+
+---
+
+## Part 6: Deduplication & aggregation services  
+**~415 lines**
+
+**Topic:** **Removing duplicates** and **building route-wise aggregation** (and persisting it). This part answers: *How do we deduplicate valid bookings and produce route summaries?*
+
+| File | Lines | Role |
+|------|-------|------|
+| `src/main/java/.../repository/AggregationDbRepository.java` | 119 | Saves route-wise aggregation to MySQL |
+| `src/main/java/.../service/DuplicateService.java` | 33 | Dedupe by booking ID or composite (name, bus, route, date) |
+| `src/test/java/.../service/DuplicateServiceTest.java` | 107 | Tests for deduplication |
+| `src/main/java/.../service/AggregationService.java` | 69 | Builds route-wise summary (count, total fare, etc.) |
+| `src/test/java/.../service/AggregationServiceTest.java` | 87 | Tests for aggregation |
+
+---
+
+## How the 6 parts tell the full story
+
+1. **Part 1** – What the app is, how it’s configured, and the data model.
+2. **Part 2** – How cleaning is orchestrated and how we validate/normalize names and numbers.
+3. **Part 3** – How we standardize dates/status and map route codes.
+4. **Part 4** – How we read data, derive categories, and define the writer contract (and DB schema).
+5. **Part 5** – How we write CSVs and persist to the database.
+6. **Part 6** – How we deduplicate and aggregate for reports.
+
+Together they cover: **config → read → clean (pipeline + rules) → dedupe → aggregate → persist & write**.
+
+---
+
+## Balance note
+
+- Parts 1–3 are very even (378, 384, 392).
+- Part 4 is slightly smaller (352) because it focuses on a single rule (derived fields), reader, and interfaces.
+- Parts 5 and 6 are 326 and 415; Part 6 is slightly larger because it contains both aggregation and deduplication services plus the aggregation DB repository.
+
+Overall, each part is **one clear topic**, **similar in size**, and **able to explain its slice of the project** so the whole system is understandable when all 6 are presented together.
