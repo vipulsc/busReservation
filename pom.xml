@@ -2,7 +2,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.bus</groupId>
 	<artifactId>bus-cleaning</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.jupiter.version>5.10.2</junit.jupiter.version>
+		<log4j2.version>2.22.1</log4j2.version>
+		<mysql.connector.version>8.0.33</mysql.connector.version>
+		<sonar.projectKey>bus-cleaning</sonar.projectKey>
+		<sonar.host.url>http://localhost:9000</sonar.host.url>
+	</properties>
 
 	<dependencies>
 
@@ -10,13 +22,13 @@
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
-			<version>2.22.1</version>
+			<version>${log4j2.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-			<version>2.22.1</version>
+			<version>${log4j2.version}</version>
 		</dependency>
 
 		<!-- MySQL JDBC Driver -->
@@ -24,16 +36,50 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.33</version>
+			<version>${mysql.connector.version}</version>
 			<scope>compile</scope>
+		</dependency>
+
+		<!-- JUnit 5 -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${junit.jupiter.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>
 
-	<properties>
-		<sonar.projectKey>bus-cleaning</sonar.projectKey>
-		<sonar.host.url>http://localhost:9000</sonar.host.url>
-	</properties>
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.3.0</version>
+				<configuration>
+					<mainClass>com.bus.cleaning.app.Application</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<distributionManagement>
 		<repository>

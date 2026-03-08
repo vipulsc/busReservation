@@ -1,4 +1,6 @@
-.settings/
+.settings/*
+!.settings/org.eclipse.jdt.core.prefs
+!.settings/org.eclipse.core.resources.prefs
 .project
 .classpath
 
@@ -9,4 +11,4 @@ Thumbs.db
 
 target/
 
-*.md
+/bin/

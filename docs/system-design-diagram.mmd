@@ -1,0 +1,68 @@
+%% Bus Reservation - System Design Diagram
+%% Export to PDF: npx @mermaid-js/mermaid-cli -i docs/system-design-diagram.mmd -o docs/system-design-diagram.pdf
+
+flowchart TB
+    subgraph INPUT[" "]
+        direction TB
+        CSV["raw_bookings.csv"]
+    end
+
+    subgraph ORCHESTRATION["Application (Orchestrator)"]
+        direction TB
+        APP[Application]
+    end
+
+    subgraph INGEST["Ingestion"]
+        direction TB
+        READER[BookingReader]
+    end
+
+    subgraph PIPELINE["Cleaning Pipeline"]
+        direction LR
+        R1[NameNormalization]
+        R2[NumericValidation]
+        R3[DateStandardization]
+        R4[StatusNormalization]
+        R5[CodeMapping]
+        R6[DerivedFields]
+    end
+
+    subgraph SERVICES["Services"]
+        direction TB
+        DEDUP[DuplicateService]
+        AGG[AggregationService]
+    end
+
+    subgraph WRITE["Write"]
+        direction TB
+        WRITER[BookingWriter]
+    end
+
+    subgraph OUTPUT["Outputs"]
+        direction TB
+        CLEANED["cleaned.csv"]
+        REJECTED["rejected.csv"]
+        AGG_CSV["aggregation.csv"]
+        DB[("MySQL")]
+    end
+
+    CSV --> READER
+    READER --> APP
+    APP --> PIPELINE
+    R1 --> R2 --> R3 --> R4 --> R5 --> R6
+    R6 --> DEDUP
+    DEDUP --> AGG
+    AGG --> APP
+    APP --> WRITER
+    WRITER --> CLEANED
+    WRITER --> REJECTED
+    WRITER --> AGG_CSV
+    APP --> DB
+
+    style INPUT fill:#e8f5e9
+    style ORCHESTRATION fill:#e3f2fd
+    style INGEST fill:#fff3e0
+    style PIPELINE fill:#fce4ec
+    style SERVICES fill:#f3e5f5
+    style WRITE fill:#e0f7fa
+    style OUTPUT fill:#f1f8e9
