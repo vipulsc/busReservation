@@ -17,9 +17,8 @@ public class AggregationDbRepository {
     private static final Logger logger =
             LogManager.getLogger(AggregationDbRepository.class);
 
-    // =====================================
+
     // AUTO CREATE AGGREGATION TABLE
-    // =====================================
     private static final String CREATE_TABLE_SQL =
             "CREATE TABLE IF NOT EXISTS booking_aggregation (" +
             "route_name VARCHAR(100) PRIMARY KEY," +
@@ -29,9 +28,7 @@ public class AggregationDbRepository {
             "cancelled_count INT" +
             ")";
 
-    // =====================================
     // UPSERT SQL
-    // =====================================
     private static final String INSERT_SQL =
             "INSERT INTO booking_aggregation " +
             "(route_name, total_bookings, total_revenue, confirmed_count, cancelled_count) " +
@@ -42,9 +39,7 @@ public class AggregationDbRepository {
             "confirmed_count=VALUES(confirmed_count)," +
             "cancelled_count=VALUES(cancelled_count)";
 
-    // =====================================
     // CREATE TABLE IF NOT EXISTS
-    // =====================================
     public void createTableIfNotExists(AppConfig cfg) throws Exception {
 
         try (Connection conn = DbConfig.getConnection(cfg);
@@ -55,9 +50,7 @@ public class AggregationDbRepository {
         }
     }
 
-    // =====================================
     // SAVE AGGREGATION DATA
-    // =====================================
     public int saveAll(AppConfig cfg,
                        List<AggregationRow> rows) throws Exception {
 
@@ -66,7 +59,7 @@ public class AggregationDbRepository {
             return 0;
         }
 
-        // ✅ Ensure table exists
+        // Ensure table exists
         createTableIfNotExists(cfg);
 
         int totalCount = 0;

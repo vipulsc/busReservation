@@ -18,9 +18,7 @@ public class DbBookingRepository {
     private static final Logger logger =
             LogManager.getLogger(DbBookingRepository.class);
 
-    // ==============================
     // TABLE CREATION SQL
-    // ==============================
     private static final String CREATE_TABLE_SQL =
             "CREATE TABLE IF NOT EXISTS booking (" +
             "booking_id VARCHAR(50) PRIMARY KEY," +
@@ -37,9 +35,7 @@ public class DbBookingRepository {
             "fare_category VARCHAR(30)" +
             ")";
 
-    // ==============================
     // INSERT / UPDATE SQL
-    // ==============================
     private static final String INSERT_SQL =
             "INSERT INTO booking " +
             "(booking_id, passenger_name, age, gender, bus_code, route_code, " +
@@ -58,9 +54,7 @@ public class DbBookingRepository {
             "age_category=VALUES(age_category)," +
             "fare_category=VALUES(fare_category)";
 
-    // ==============================
     // AUTO CREATE TABLE
-    // ==============================
     public void createTableIfNotExists(AppConfig cfg) throws Exception {
 
         try (Connection conn = DbConfig.getConnection(cfg);
@@ -71,9 +65,7 @@ public class DbBookingRepository {
         }
     }
 
-    // ==============================
     // SAVE ALL BOOKINGS
-    // ==============================
     public void saveAll(AppConfig cfg, List<Booking> bookings) throws Exception {
 
         if (bookings == null || bookings.isEmpty()) {
@@ -81,7 +73,7 @@ public class DbBookingRepository {
             return;
         }
 
-        // ✅ Ensure table exists
+        //  Ensure table exists
         createTableIfNotExists(cfg);
 
         try (Connection conn = DbConfig.getConnection(cfg);
@@ -126,7 +118,7 @@ public class DbBookingRepository {
                 batchCount++;
                 totalCount++;
 
-                // Execute batch every 100 rows
+                // batch execution
                 if (batchCount == 100) {
                     ps.executeBatch();
                     conn.commit();
@@ -134,7 +126,7 @@ public class DbBookingRepository {
                 }
             }
 
-            // remaining rows
+            // batch execution
             ps.executeBatch();
             conn.commit();
 

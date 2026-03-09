@@ -6,7 +6,7 @@ import java.util.*;
 
 public class DuplicateService {
 
-	// Remove duplicates using bookingId (primary), else composite key
+	// Remove duplicates
 	public List<Booking> removeDuplicates(List<Booking> validBookings) {
 
 		Map<String, Booking> unique = new LinkedHashMap<>();

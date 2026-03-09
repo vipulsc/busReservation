@@ -17,17 +17,14 @@ public class NameNormalizationRule implements CleaningRule {
             return;
         }
 
-        // Trim spaces
         String name = b.passengerName.trim();
 
-        // Validate (only letters and spaces allowed)
         if (!name.matches("[a-zA-Z ]+")) {
             b.addReason("InvalidName");
             logger.warn("Invalid name for bookingId={}", b.bookingId);
             return;
         }
 
-        // Convert to Proper Case
         String[] parts = name.toLowerCase().split(" ");
         StringBuilder proper = new StringBuilder();
 

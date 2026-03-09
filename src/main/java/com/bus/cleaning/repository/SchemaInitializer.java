@@ -13,7 +13,7 @@ public class SchemaInitializer {
 
     private static final Logger logger = LogManager.getLogger(SchemaInitializer.class);
 
-    // Pass database name like "busdb" or Railway MYSQLDATABASE
+    // Ensure database exists
     public void ensureDatabaseExists(AppConfig cfg, String dbName) throws Exception {
 
         try (Connection conn = DbConfig.getServerConnection(cfg);

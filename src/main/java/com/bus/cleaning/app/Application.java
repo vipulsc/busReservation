@@ -37,18 +37,15 @@ public class Application {
         logger.info("BUS CLEANING JOB STARTED");
         logger.info("==================================");
 
-        // ==============================
+
         // STEP 1: READ RAW DATA
-        // ==============================
         BookingReader reader = new CsvBookingReader();
         BookingWriter writer = new CsvBookingWriter();
 
         List<Booking> all = reader.readAll(cfg.inputPath);
         logger.info("Total records read: {}", all.size());
 
-        // ==============================
         // STEP 2: CLEANING PIPELINE
-        // ==============================
         CleaningPipeline pipeline = new CleaningPipeline(Arrays.asList(
                 new NameNormalizationRule(),
                 new NumericValidationRule(),
@@ -72,15 +69,13 @@ public class Application {
         logger.info("Valid before de-dup: {}", valid.size());
         logger.info("Rejected records: {}", invalid.size());
 
-        // ==============================
         // STEP 3: REMOVE DUPLICATES
-        // ==============================
         DuplicateService dup = new DuplicateService();
         List<Booking> uniqueValid = dup.removeDuplicates(valid);
 
         logger.info("Valid after de-dup: {}", uniqueValid.size());
 
-        // ==============================
+        // ==============================       
         // STEP 4: SAVE TO DATABASE
         // ==============================
         if (cfg.dbEnabled) {
@@ -108,7 +103,7 @@ public class Application {
             logger.info("Database operations completed successfully");
         }
 
-        // ==============================
+        // ==============================       
         // STEP 5: WRITE OUTPUT FILES
         // ==============================
         writer.writeCleaned(cfg.cleanedPath, uniqueValid);

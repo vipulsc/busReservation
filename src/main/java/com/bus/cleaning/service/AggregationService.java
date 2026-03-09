@@ -10,7 +10,7 @@ import com.bus.cleaning.model.Booking;
 
 public class AggregationService {
 
-    // DTO row for aggregation report
+    // Aggregation row for report
     public static class AggregationRow {
         public final String routeName;
         public final int totalBookings;
@@ -31,7 +31,7 @@ public class AggregationService {
     // Use Case 9: Aggregation (Route-wise)
     public List<AggregationRow> routeWiseSummary(List<Booking> bookings) {
 
-        // Manual grouping (no Collectors) => avoids all generic inference issues
+        // Manual grouping
         Map<String, List<Booking>> grouped = new HashMap<>();
 
         for (Booking b : bookings) {
@@ -63,7 +63,7 @@ public class AggregationService {
             rows.add(new AggregationRow(route, total, revenue, conf, canc));
         }
 
-        // Sort by revenue descending
+        // Sort by revenue
         rows.sort(Comparator.comparingDouble((AggregationRow r) -> r.totalRevenue).reversed());
         return rows;
     }
