@@ -1,187 +1,312 @@
 BookingID,PassengerName,Age,Gender,BusCode,RouteCode,TravelDate,Fare,Status,RouteName,AgeCategory,FareCategory,Reason
-1001,Sunil Patel,-5,f,B05,RT2,2024-04-17,abc,CANCELLED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
-1002,Priya Shah,,F,B02,RT2,2024-04-09,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeFormat|InvalidFareFormat
-1003,Mohan Mehta,58,m,B03,RT6,2024-04-13,abc,CONFIRMED,Ahmedabad-Surat,Adult,,InvalidFareFormat
-1004,Neha Mehta,-5,m,B06,RT6,2024-04-14,654,CONFIRMED,Ahmedabad-Surat,,High,InvalidAgeRange
-1006,Deepa Singh,,f,B06,RT6,2024-04-01,-700,CANCELLED,Ahmedabad-Surat,,,InvalidAgeFormat|NegativeFare
-1007,Anjali Malhotra,150,F,B01,RT3,2024-04-20,406,CANCELLED,Bangalore-Chennai,,Low,InvalidAgeRange
-1008,Priyanka Verma,,f,B02,RT2,2024-05-26,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeFormat|InvalidFareFormat
-1009,Kavita Malhotra,37,f,B04,RT3,2024-05-27,abc,CANCELLED,Bangalore-Chennai,Adult,,InvalidFareFormat
-1010,Alok Sharma,twenty,M,B01,RT6,2024-05-10,480,CONFIRMED,Ahmedabad-Surat,,Low,InvalidAgeFormat
-1011,Ramesh Verma,-5,f,B04,RT6,2024-05-18,674,CONFIRMED,Ahmedabad-Surat,,High,InvalidAgeRange
-1012,Mehul Yadav,58,F,B03,RT5,2024-05-25,abc,CANCELLED,Kolkata-Patna,Adult,,InvalidFareFormat
-1013,Alok Jain,150,m,B04,RT5,2024-05-04,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
-1014,Meena Gupta,,f,B05,RT5,2024-05-20,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
-1015,Mehul Malhotra,,f,B01,RT5,2024-05-01,566,CONFIRMED,Kolkata-Patna,,Medium,InvalidAgeFormat
-1016,Sunil Gupta,,m,B06,RT2,2024-05-12,405,CONFIRMED,Mumbai-Pune,,Low,InvalidAgeFormat
-1017,Ashok Arora,,f,B01,RT4,2024-05-04,676,CONFIRMED,Hyderabad-Goa,,High,InvalidAgeFormat
-1018,Neha Verma,29,f,B06,RT3,2024-04-16,abc,CONFIRMED,Bangalore-Chennai,Adult,,InvalidFareFormat
-1019,,-5,M,B04,RT3,2024-04-06,436,CANCELLED,Bangalore-Chennai,,Low,MissingName|InvalidAgeRange
-1020,Rahul Patel,150,m,B03,RT5,2024-05-12,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
-1021,Divya Verma,150,F,B05,RT4,2024-04-25,abc,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|InvalidFareFormat
-1022,Mohan Das,24,M,B06,RT1,2024-04-10,abc,CANCELLED,Delhi-Jaipur,Adult,,InvalidFareFormat
-1023,Arjun Das,twenty,F,B06,RT6,2024-04-10,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
-1024,Sunil Gupta,twenty,F,B06,RT3,2024-05-07,525,CANCELLED,Bangalore-Chennai,,Medium,InvalidAgeFormat
-1025,Neeraj Mehta,55,m,B01,RT5,2024-04-25,abc,CONFIRMED,Kolkata-Patna,Adult,,InvalidFareFormat
-1026,Nitin Sharma,28,m,B05,RT5,2024-05-03,abc,CONFIRMED,Kolkata-Patna,Adult,,InvalidFareFormat
-1027,Rahul Verma,44,m,B02,RT4,2024-04-19,abc,CONFIRMED,Hyderabad-Goa,Adult,,InvalidFareFormat
-1028,Ankit Malhotra,twenty,f,B06,RT6,2024-04-21,abc,CANCELLED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
-1029,Rohit Patel,43,m,B02,RT5,2024-04-16,abc,CONFIRMED,Kolkata-Patna,Adult,,InvalidFareFormat
-1030,Divya Malhotra@123,,m,B06,RT2,2024-04-25,abc,CONFIRMED,Mumbai-Pune,,,InvalidName|InvalidAgeFormat|InvalidFareFormat
-1031,Rohit Singh,twenty,f,B05,RT6,2024-04-21,685,CONFIRMED,Ahmedabad-Surat,,High,InvalidAgeFormat
-1032,Mohan Jain,,m,B01,RT2,2024-04-25,-700,CONFIRMED,Mumbai-Pune,,,InvalidAgeFormat|NegativeFare
-1033,Karan Das,,F,B06,RT2,2024-05-18,534,CONFIRMED,Mumbai-Pune,,Medium,InvalidAgeFormat
-1034,Sakshi Mehta,-5,M,B03,RT5,2024-05-22,626,CANCELLED,Kolkata-Patna,,High,InvalidAgeRange
-1035,Amit Sharma,,m,B04,RT5,2024-04-01,-700,CANCELLED,Kolkata-Patna,,,InvalidAgeFormat|NegativeFare
-1036,Alok Malhotra,twenty,M,B06,RT3,2024-04-30,-700,CANCELLED,Bangalore-Chennai,,,InvalidAgeFormat|NegativeFare
-1037,Divya Arora,-5,F,B02,RT2,2024-04-13,-700,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|NegativeFare
-1039,Mohan Gupta,-5,F,B01,RT1,2024-04-27,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|InvalidFareFormat
-1040,Neha Verma,50,m,B02,RT3,2024-04-20,-700,CANCELLED,Bangalore-Chennai,Adult,,NegativeFare
-1041,Payal Shah,twenty,m,B05,RT5,2024-05-30,562,CANCELLED,Kolkata-Patna,,Medium,InvalidAgeFormat
-1042,Neha Das,twenty,m,B02,RT3,2024-05-25,abc,CANCELLED,Bangalore-Chennai,,,InvalidAgeFormat|InvalidFareFormat
-1043,Priya Arora,,m,B02,RT3,2024-04-21,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeFormat|InvalidFareFormat
-1044,Aarti Jain@123,150,M,B01,RT6,2024-05-27,533,CANCELLED,Ahmedabad-Surat,,Medium,InvalidName|InvalidAgeRange
-1045,Simran Das,150,F,B01,RT5,2024-05-09,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
-1046,Neeraj Yadav,twenty,m,B05,RT1,2024-04-26,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
-1047,Simran Shah,150,m,B04,RT4,2024-05-22,-700,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|NegativeFare
-1048,Sakshi Singh,-5,f,B03,RT6,2024-04-14,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeRange|InvalidFareFormat
-1049,Rahul Patel,35,M,B02,RT4,2024-04-20,-700,CONFIRMED,Hyderabad-Goa,Adult,,NegativeFare
-1050,Payal Patel,twenty,F,B05,RT6,2024-05-27,490,CONFIRMED,Ahmedabad-Surat,,Low,InvalidAgeFormat
-1051,Vivek Malhotra,-5,f,B02,RT2,2024-05-24,415,CANCELLED,Mumbai-Pune,,Low,InvalidAgeRange
-1052,Nitin Verma,,M,B06,RT1,2024-05-03,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
-1053,Priya Verma,150,F,B01,RT5,2024-05-03,487,CANCELLED,Kolkata-Patna,,Low,InvalidAgeRange
-1054,Priya Kapoor,-5,M,B01,RT5,2024-04-26,563,CONFIRMED,Kolkata-Patna,,Medium,InvalidAgeRange
-1055,Alok Yadav,45,m,B06,RT1,2024-04-10,abc,CANCELLED,Delhi-Jaipur,Adult,,InvalidFareFormat
-1056,Alok Singh,twenty,f,B06,RT6,2024-04-22,-700,CANCELLED,Ahmedabad-Surat,,,InvalidAgeFormat|NegativeFare
-1057,Rohit Singh,,m,B05,RT2,2024-04-12,-700,CANCELLED,Mumbai-Pune,,,InvalidAgeFormat|NegativeFare
-1058,Alok Singh,-5,M,B02,RT1,2024-05-22,-700,CANCELLED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
-1059,Lata Verma@123,49,F,B01,RT5,2024-04-03,-700,CONFIRMED,Kolkata-Patna,Adult,,InvalidName|NegativeFare
-1060,Priyanka Das,-5,f,B01,RT3,2024-04-25,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|InvalidFareFormat
-1061,Ramesh Singh,150,M,B05,RT5,2024-04-26,566,CONFIRMED,Kolkata-Patna,,Medium,InvalidAgeRange
-1062,Ritu Sharma,twenty,F,B05,RT4,2024-05-29,abc,CANCELLED,Hyderabad-Goa,,,InvalidAgeFormat|InvalidFareFormat
-1063,Suresh Sharma,150,M,B05,RT5,2024-05-06,abc,CANCELLED,Kolkata-Patna,,,InvalidAgeRange|InvalidFareFormat
-1064,Divya Sharma,,f,B04,RT6,2024-05-05,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
-1065,Deepa Gupta@123,150,m,B04,RT1,2024-04-26,abc,CONFIRMED,Delhi-Jaipur,,,InvalidName|InvalidAgeRange|InvalidFareFormat
-1066,Vikas Yadav,150,M,B03,RT4,2024-05-08,679,CONFIRMED,Hyderabad-Goa,,High,InvalidAgeRange
-1067,Simran Kapoor,twenty,F,B05,RT3,2024-05-04,472,CANCELLED,Bangalore-Chennai,,Low,InvalidAgeFormat
-1069,Prakash Yadav,,m,B02,RT6,2024-04-21,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeFormat|NegativeFare
-1070,Sneha Patel,43,M,B03,RT4,2024-05-04,abc,CONFIRMED,Hyderabad-Goa,Adult,,InvalidFareFormat
-1071,Anjali Patel,twenty,F,B04,RT5,2024-04-21,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeFormat|NegativeFare
-1072,Rohit Gupta,-5,M,B04,RT6,2024-05-09,424,CONFIRMED,Ahmedabad-Surat,,Low,InvalidAgeRange
-1073,Anita Singh,150,m,B04,RT6,2024-04-20,abc,CANCELLED,Ahmedabad-Surat,,,InvalidAgeRange|InvalidFareFormat
-1075,Neha Singh,,m,B02,RT6,2024-05-30,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
-1076,Anjali Singh,150,F,B02,RT2,2024-04-17,-700,CANCELLED,Mumbai-Pune,,,InvalidAgeRange|NegativeFare
-1077,Ashok Singh,20,M,B02,RT3,2024-05-26,abc,CONFIRMED,Bangalore-Chennai,Adult,,InvalidFareFormat
-1079,Reena Das,-5,m,B04,RT4,2024-05-01,abc,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|InvalidFareFormat
-1081,Raj Shah,,M,B03,RT1,2024-05-29,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|NegativeFare
-1082,Vivek Kumar,150,f,B05,RT5,2024-04-09,abc,CANCELLED,Kolkata-Patna,,,InvalidAgeRange|InvalidFareFormat
-1083,Neeraj Malhotra,,m,B06,RT5,2024-05-08,-700,CANCELLED,Kolkata-Patna,,,InvalidAgeFormat|NegativeFare
-1084,Raj Malhotra,150,M,B05,RT3,2024-04-02,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|InvalidFareFormat
-1085,Neeraj Sharma,twenty,M,B04,RT6,2024-05-29,465,CONFIRMED,Ahmedabad-Surat,,Low,InvalidAgeFormat
-1088,Ramesh Singh,150,F,B03,RT2,2024-05-25,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
-1089,,150,m,B06,RT2,2024-05-13,-700,CONFIRMED,Mumbai-Pune,,,MissingName|InvalidAgeRange|NegativeFare
-1090,Raj Arora,150,m,B04,RT3,2024-05-06,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|InvalidFareFormat
-1091,Ramesh Yadav,28,F,B01,RT2,2024-05-20,-700,CANCELLED,Mumbai-Pune,Adult,,NegativeFare
-1092,Arjun Gupta,,F,B05,RT5,2024-05-27,-700,CANCELLED,Kolkata-Patna,,,InvalidAgeFormat|NegativeFare
-1093,Alok Yadav,-5,F,B04,RT3,2024-05-07,-700,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|NegativeFare
-1094,Vivek Shah,twenty,f,B05,RT5,2024-04-04,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
-1095,Sneha Gupta,-5,F,B01,RT6,2024-04-19,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeRange|NegativeFare
-1096,Nitin Patel,150,F,B01,RT3,2024-05-04,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|InvalidFareFormat
-1097,,-5,m,B04,RT3,2024-04-01,abc,CONFIRMED,Bangalore-Chennai,,,MissingName|InvalidAgeRange|InvalidFareFormat
-1098,Sunil Patel,twenty,f,B02,RT2,2024-05-12,-700,CONFIRMED,Mumbai-Pune,,,InvalidAgeFormat|NegativeFare
-1099,Sneha Sharma,-5,m,B02,RT2,2024-05-30,480,CONFIRMED,Mumbai-Pune,,Low,InvalidAgeRange
-1100,Nitin Kumar,,M,B06,RT2,2024-04-25,681,CONFIRMED,Mumbai-Pune,,High,InvalidAgeFormat
-1101,Kavita Singh,21,M,B03,RT3,2024-04-28,abc,CONFIRMED,Bangalore-Chennai,Adult,,InvalidFareFormat
-1102,Priya Shah,150,F,B03,RT5,2024-05-15,635,CANCELLED,Kolkata-Patna,,High,InvalidAgeRange
-1103,Payal Jain,38,F,B01,RT1,2024-05-01,abc,CANCELLED,Delhi-Jaipur,Adult,,InvalidFareFormat
-1104,Sneha Kapoor,150,f,B02,RT3,2024-04-19,-700,CANCELLED,Bangalore-Chennai,,,InvalidAgeRange|NegativeFare
-1105,Sneha Kapoor@123,-5,F,B02,RT4,2024-05-09,abc,CONFIRMED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|InvalidFareFormat
-1107,Nitin Kapoor@123,150,M,B04,RT3,2024-04-15,420,CONFIRMED,Bangalore-Chennai,,Low,InvalidName|InvalidAgeRange
-1108,Aarti Verma,42,f,B03,RT2,2024-04-08,abc,CONFIRMED,Mumbai-Pune,Adult,,InvalidFareFormat
-1110,Mehul Verma@123,150,M,B05,RT2,2024-04-10,abc,CONFIRMED,Mumbai-Pune,,,InvalidName|InvalidAgeRange|InvalidFareFormat
-1111,,twenty,F,B04,RT5,2024-04-07,579,CONFIRMED,Kolkata-Patna,,Medium,MissingName|InvalidAgeFormat
-1112,Rohit Singh,31,M,B03,RT2,2024-04-06,-700,CANCELLED,Mumbai-Pune,Adult,,NegativeFare
-1113,Simran Patel,150,F,B02,RT5,2024-05-25,abc,CANCELLED,Kolkata-Patna,,,InvalidAgeRange|InvalidFareFormat
-1115,,,M,B06,RT5,2024-05-14,597,CONFIRMED,Kolkata-Patna,,Medium,MissingName|InvalidAgeFormat
-1116,ARJUN GUPTA  @123,150,m,B06,RT1,2024-05-13,-700,CONFIRMED,Delhi-Jaipur,,,InvalidName|InvalidAgeRange|NegativeFare
-1117,Pooja Shah,33,f,B06,RT5,2024-04-28,abc,CANCELLED,Kolkata-Patna,Adult,,InvalidFareFormat
-1118,Nitin Yadav,-5,M,B04,RT6,2024-05-25,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeRange|NegativeFare
-1119,Ramesh Gupta,twenty,F,B02,RT1,2024-05-27,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|NegativeFare
-1120,Sachin Mehta,twenty,F,B02,RT4,2024-05-10,464,CONFIRMED,Hyderabad-Goa,,Low,InvalidAgeFormat
-1121,Divya Kapoor,-5,F,B02,RT5,2024-04-10,492,CONFIRMED,Kolkata-Patna,,Low,InvalidAgeRange
-1122,Neha Arora,-5,m,B03,RT1,2024-05-15,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|InvalidFareFormat
-1123,Aarti Malhotra,twenty,m,B05,RT2,2024-04-19,-700,CANCELLED,Mumbai-Pune,,,InvalidAgeFormat|NegativeFare
-1124,Vivek Arora,-5,f,B06,RT3,2024-05-28,521,CANCELLED,Bangalore-Chennai,,Medium,InvalidAgeRange
-1125,Amit Mehta,150,f,B03,RT1,2024-04-15,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|InvalidFareFormat
-1126,Prakash Kapoor,,M,B02,RT3,2024-05-24,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeFormat|InvalidFareFormat
-1127,Sakshi Gupta,twenty,M,B03,RT5,2024-04-12,660,CONFIRMED,Kolkata-Patna,,High,InvalidAgeFormat
-1128,Divya Shah,twenty,m,B05,RT4,2024-04-28,528,CONFIRMED,Hyderabad-Goa,,Medium,InvalidAgeFormat
-1129,Pooja Kumar,150,M,B06,RT6,2024-05-14,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeRange|InvalidFareFormat
-1130,Sunil Mehta,150,m,B05,RT5,2024-05-02,560,CONFIRMED,Kolkata-Patna,,Medium,InvalidAgeRange
-1131,Sunil Kapoor,,M,B04,RT3,2024-04-27,-700,CANCELLED,Bangalore-Chennai,,,InvalidAgeFormat|NegativeFare
-1133,Priyanka Kumar,-5,M,B04,RT5,2024-05-23,492,CANCELLED,Kolkata-Patna,,Low,InvalidAgeRange
-1134,Priya Mehta,150,M,B01,RT6,2024-04-23,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeRange|NegativeFare
-1135,Ashok Das,,M,B01,RT1,2024-05-14,-700,CANCELLED,Delhi-Jaipur,,,InvalidAgeFormat|NegativeFare
-1136,Alok Shah,25,m,B01,RT6,2024-04-21,abc,CANCELLED,Ahmedabad-Surat,Adult,,InvalidFareFormat
-1137,Ankit Malhotra,150,f,B01,RT5,2024-04-19,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
-1138,Rohit Malhotra,-5,F,B06,RT3,2024-04-24,-700,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|NegativeFare
-1139,Neeraj Gupta,twenty,f,B01,RT6,2024-05-07,abc,CANCELLED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
-1140,Simran Das,150,f,B03,RT6,2024-04-21,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeRange|NegativeFare
-1141,Ankit Jain,36,M,B04,RT2,2024-05-21,abc,CONFIRMED,Mumbai-Pune,Adult,,InvalidFareFormat
-1142,Vivek Gupta,,F,B01,RT4,2024-05-01,-700,CONFIRMED,Hyderabad-Goa,,,InvalidAgeFormat|NegativeFare
-1143,Simran Malhotra,twenty,M,B04,RT3,2024-05-08,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeFormat|InvalidFareFormat
-1144,Raj Kumar,twenty,M,B01,RT6,2024-05-16,630,CONFIRMED,Ahmedabad-Surat,,High,InvalidAgeFormat
-1145,Kavita Verma,33,M,B03,RT2,2024-05-04,-700,CANCELLED,Mumbai-Pune,Adult,,NegativeFare
-1146,Simran Das,47,M,B05,RT5,2024-05-09,-700,CONFIRMED,Kolkata-Patna,Adult,,NegativeFare
-1147,Suresh Gupta@123,53,M,B05,RT2,2024-05-17,abc,CONFIRMED,Mumbai-Pune,Adult,,InvalidName|InvalidFareFormat
-1148,Sachin Arora,,m,B05,RT6,2024-04-11,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
-1149,Neha Malhotra,27,m,B02,RT1,2024-04-06,abc,CANCELLED,Delhi-Jaipur,Adult,,InvalidFareFormat
-1150,Raj Kapoor,twenty,M,B02,RT4,2024-04-05,628,CONFIRMED,Hyderabad-Goa,,High,InvalidAgeFormat
-1151,Reena Gupta,,F,B01,RT1,2024-05-04,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|NegativeFare
-1152,Raj Sharma,150,f,B02,RT5,2024-04-23,407,CONFIRMED,Kolkata-Patna,,Low,InvalidAgeRange
-1153,Anita Sharma,54,F,B06,RT6,2024-05-19,-700,CONFIRMED,Ahmedabad-Surat,Adult,,NegativeFare
-1154,Sunil Patel,twenty,m,B04,RT2,2024-04-19,478,CONFIRMED,Mumbai-Pune,,Low,InvalidAgeFormat
-1155,Sneha Yadav,150,M,B01,RT4,2024-05-14,-700,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|NegativeFare
-1156,Payal Arora,150,M,B05,RT2,2024-05-17,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
-1157,,,f,B01,RT6,2024-04-27,-700,CONFIRMED,Ahmedabad-Surat,,,MissingName|InvalidAgeFormat|NegativeFare
-1158,Deepa Das,28,F,B02,RT2,2024-05-12,abc,CANCELLED,Mumbai-Pune,Adult,,InvalidFareFormat
-1159,Manoj Kumar,,F,B03,RT2,2024-04-18,493,CONFIRMED,Mumbai-Pune,,Low,InvalidAgeFormat
-1160,Ankit Gupta,twenty,m,B02,RT5,2024-05-01,abc,CANCELLED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
-1161,Nitin Sharma,,m,B04,RT2,2024-05-26,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeFormat|InvalidFareFormat
-1162,Anjali Shah,-5,f,B03,RT1,2024-04-30,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
-1163,Mehul Patel,150,m,B06,RT5,2024-04-02,abc,CANCELLED,Kolkata-Patna,,,InvalidAgeRange|InvalidFareFormat
-1164,Sunil Patel,,f,B02,RT6,2024-04-29,abc,CANCELLED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
-1165,Prakash Yadav,-5,F,B03,RT2,2024-04-24,604,CONFIRMED,Mumbai-Pune,,High,InvalidAgeRange
-1166,Priyanka Singh,150,F,B06,RT5,2024-04-22,-700,CANCELLED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
-1167,Kavita Malhotra,150,F,B06,RT2,2024-04-04,688,CONFIRMED,Mumbai-Pune,,High,InvalidAgeRange
-1168,Rohit Malhotra,twenty,F,B04,RT5,2024-05-05,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
-1169,Anjali Yadav,150,M,B05,RT2,2024-05-12,abc,CANCELLED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
-1170,Simran Verma,,M,B06,RT6,2024-05-02,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
-1171,Neha Jain,-5,f,B02,RT4,2024-04-05,487,CANCELLED,Hyderabad-Goa,,Low,InvalidAgeRange
-1172,Simran Gupta,,m,B04,RT3,2024-05-23,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeFormat|InvalidFareFormat
-1173,Pooja Shah,,f,B05,RT1,2024-04-07,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|NegativeFare
-1174,Nitin Jain,,m,B01,RT2,2024-05-23,589,CONFIRMED,Mumbai-Pune,,Medium,InvalidAgeFormat
-1175,Alok Shah,,F,B01,RT4,2024-04-19,457,CONFIRMED,Hyderabad-Goa,,Low,InvalidAgeFormat
-1176,Gaurav Arora,-5,f,B05,RT3,2024-05-20,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|InvalidFareFormat
-1177,Prakash Jain,,f,B03,RT5,2024-04-19,abc,CANCELLED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
-1178,Payal Malhotra,-5,F,B05,RT3,2024-05-07,465,CANCELLED,Bangalore-Chennai,,Low,InvalidAgeRange
-1179,Meena Yadav,twenty,F,B05,RT1,2024-04-19,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|NegativeFare
-1181,Anita Malhotra,-5,m,B05,RT3,2024-05-16,534,CONFIRMED,Bangalore-Chennai,,Medium,InvalidAgeRange
-1182,Vikas Das,,f,B03,RT1,2024-05-23,abc,CANCELLED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
-1183,Neha Verma,,m,B03,RT5,2024-04-13,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
-1184,Kavita Singh,150,m,B06,RT1,2024-05-16,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
-1185,Ritu Arora,48,F,B02,RT4,2024-05-26,abc,CONFIRMED,Hyderabad-Goa,Adult,,InvalidFareFormat
-1186,Kavita Malhotra,twenty,F,B02,RT5,2024-05-29,-700,CANCELLED,Kolkata-Patna,,,InvalidAgeFormat|NegativeFare
-1187,Ritu Shah,-5,F,B01,RT6,2024-05-07,649,CONFIRMED,Ahmedabad-Surat,,High,InvalidAgeRange
-1188,Priyanka Mehta,150,F,B05,RT1,2024-04-07,-700,CANCELLED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
-1189,Divya Das,,M,B01,RT5,2024-04-14,422,CONFIRMED,Kolkata-Patna,,Low,InvalidAgeFormat
-1190,Lata Shah,,M,B03,RT5,2024-05-24,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
-1191,Prakash Jain,150,f,B06,RT5,2024-04-23,614,CONFIRMED,Kolkata-Patna,,High,InvalidAgeRange
-1193,Karan Malhotra,27,M,B05,RT5,2024-04-30,abc,CONFIRMED,Kolkata-Patna,Adult,,InvalidFareFormat
-1194,Mehul Gupta,33,m,B02,RT6,2024-04-07,abc,CONFIRMED,Ahmedabad-Surat,Adult,,InvalidFareFormat
-1195,Neeraj Gupta,150,M,B04,RT6,2024-05-28,437,CANCELLED,Ahmedabad-Surat,,Low,InvalidAgeRange
-1196,Rahul Sharma,150,f,B06,RT4,2024-05-05,626,CONFIRMED,Hyderabad-Goa,,High,InvalidAgeRange
-1197,Mohan Sharma,150,F,B06,RT4,2024-04-23,-700,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|NegativeFare
-1198,Reena Yadav,,f,B01,RT6,2024-04-08,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
-1199,Aarti Kapoor,52,F,B01,RT4,2024-05-07,abc,CONFIRMED,Hyderabad-Goa,Adult,,InvalidFareFormat
-1200,Mehul Gupta,-5,f,B06,RT3,2024-04-21,605,CONFIRMED,Bangalore-Chennai,,High,InvalidAgeRange
+2001,Manoj Singh,112,F,B03,RT3,2024-05-10,435,CONFIRMED,Bangalore-Chennai,,Low,InvalidAgeRange
+2005,Ritu Kumar,102,m,B05,RT3,2024-05-29,550,CONFIRMED,Bangalore-Chennai,,Medium,InvalidAgeRange
+2007,Priyanka Verma,120,F,B01,RT5,2024-04-04,474,CANCELLED,Kolkata-Patna,,Low,InvalidAgeRange
+2009,Ramesh Sharma,106,F,B02,RT2,2024-06-11,485,CONFIRMED,Mumbai-Pune,,Low,InvalidAgeRange
+2011,Karan Kumar@123,16,F,B03,RT1,2024-04-14,497,CONFIRMED,Delhi-Jaipur,Minor,Low,InvalidName
+2015,Prakash Sharma,102,m,B05,RT1,2024-04-03,463,CONFIRMED,Delhi-Jaipur,,Low,InvalidAgeRange
+2016,Lata Gupta,102,m,B05,RT4,2024-04-09,459,CONFIRMED,Hyderabad-Goa,,Low,InvalidAgeRange
+2017,Vikas Malhotra,150,f,B01,RT4,2024-04-25,-700,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|NegativeFare
+2018,SUNIL PATEL  @123,150,F,B05,RT1,2024-06-06,-700,CONFIRMED,Delhi-Jaipur,,,InvalidName|InvalidAgeRange|NegativeFare
+2023,,-5,m,B04,RT1,2024-06-15,507,CANCELLED,Delhi-Jaipur,,Medium,MissingName|InvalidAgeRange
+2028,Ramesh Gupta,-5,f,B04,RT1,2024-05-11,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
+2031,,-5,m,B02,RT2,2024-06-29,570,CANCELLED,Mumbai-Pune,,Medium,MissingName|InvalidAgeRange
+2036,Ankit Yadav,106,F,B05,RT1,2024-05-22,695,CANCELLED,Delhi-Jaipur,,High,InvalidAgeRange
+2037,SIMRAN DAS  @123,150,F,B02,RT2,2024-05-19,-700,CONFIRMED,Mumbai-Pune,,,InvalidName|InvalidAgeRange|NegativeFare
+2038,Neha Kumar,106,m,B02,RT5,2024-06-11,561,CONFIRMED,Kolkata-Patna,,Medium,InvalidAgeRange
+2042,Sachin Sharma,110,f,B03,RT6,2024-06-13,574,CONFIRMED,Ahmedabad-Surat,,Medium,InvalidAgeRange
+2043,Nitin Kumar,105,M,B05,RT1,2024-04-16,518,CONFIRMED,Delhi-Jaipur,,Medium,InvalidAgeRange
+2045,Reena Das,150,m,B06,RT5,2024-05-18,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
+2049,Pooja Gupta,,M,B01,RT1,2024-04-18,abc,CANCELLED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
+2050,",",twenty,M,B04,RT5,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2052,Aarti Sharma,,m,B01,RT6,2024-06-24,abc,CANCELLED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
+2055,Ankit Kapoor,119,f,B03,RT1,2024-05-20,423,CANCELLED,Delhi-Jaipur,,Low,InvalidAgeRange
+2056,Sakshi Malhotra,105,f,B02,RT4,2024-05-14,638,CANCELLED,Hyderabad-Goa,,High,InvalidAgeRange
+2064,Ramesh Patel,150,f,B03,RT4,2024-05-11,574,CONFIRMED,Hyderabad-Goa,,Medium,InvalidAgeRange
+2065,",",twenty,f,B06,RT3,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2068,Amit Yadav,-5,f,B03,RT4,2024-04-19,abc,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|InvalidFareFormat
+2072,Ashok Patel,-5,M,B05,RT6,2024-06-16,463,CONFIRMED,Ahmedabad-Surat,,Low,InvalidAgeRange
+2073,Raj Shah,103,m,B01,RT1,2024-04-01,477,CONFIRMED,Delhi-Jaipur,,Low,InvalidAgeRange
+2074,Ramesh Gupta,-5,f,B04,RT6,2024-05-04,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeRange|NegativeFare
+2079,,-5,M,B04,RT4,2024-06-06,598,CANCELLED,Hyderabad-Goa,,Medium,MissingName|InvalidAgeRange
+2082,Ankit Arora@123,36,m,B04,RT3,2024-04-17,-700,CONFIRMED,Bangalore-Chennai,Adult,,InvalidName|NegativeFare
+2084,Meena Shah@123,22,F,B01,RT4,2024-04-01,413,CONFIRMED,Hyderabad-Goa,Adult,Low,InvalidName
+2093,RAMESH MEHTA  @123,150,F,B02,RT6,2024-05-08,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidName|InvalidAgeRange|NegativeFare
+2101,Ritu Kapoor,twenty,F,B06,RT4,2024-06-23,abc,CANCELLED,Hyderabad-Goa,,,InvalidAgeFormat|InvalidFareFormat
+2102,Sachin Gupta,111,m,B04,RT3,2024-04-23,642,CANCELLED,Bangalore-Chennai,,High,InvalidAgeRange
+2103,",",,M,B05,RT2,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2105,Reena Das@123,-5,F,B01,RT2,2024-04-14,abc,CONFIRMED,Mumbai-Pune,,,InvalidName|InvalidAgeRange|InvalidFareFormat
+2106,SNEHA DAS  @123,150,F,B05,RT3,2024-04-10,-700,CONFIRMED,Bangalore-Chennai,,,InvalidName|InvalidAgeRange|NegativeFare
+2108,,-5,m,B01,RT6,2024-05-25,422,CANCELLED,Ahmedabad-Surat,,Low,MissingName|InvalidAgeRange
+2112,Ashok Gupta,,m,B04,RT5,2024-06-26,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
+2114,Vivek Arora,116,f,B02,RT2,2024-06-04,527,CANCELLED,Mumbai-Pune,,Medium,InvalidAgeRange
+2116,Prakash Shah,twenty,F,B02,RT2,2024-05-06,634,CONFIRMED,Mumbai-Pune,,High,InvalidAgeFormat
+2119,,-5,m,B02,RT3,2024-06-04,591,CANCELLED,Bangalore-Chennai,,Medium,MissingName|InvalidAgeRange
+2121,Ashok Verma,105,F,B05,RT2,2024-04-28,454,CANCELLED,Mumbai-Pune,,Low,InvalidAgeRange
+2126,Nitin Gupta,-5,m,B01,RT3,2024-05-16,abc,CANCELLED,Bangalore-Chennai,,,InvalidAgeRange|InvalidFareFormat
+2127,Karan Gupta,twenty,F,B04,RT2,2024-06-01,615,CANCELLED,Mumbai-Pune,,High,InvalidAgeFormat
+2128,",",,f,B03,RT4,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2131,Meena Sharma,117,F,B05,RT5,2024-04-10,567,CONFIRMED,Kolkata-Patna,,Medium,InvalidAgeRange
+2132,Ashok Kapoor,118,f,B03,RT2,2024-05-24,601,CANCELLED,Mumbai-Pune,,High,InvalidAgeRange
+2135,Mehul Das@123,54,F,B06,RT3,2024-05-27,-700,CONFIRMED,Bangalore-Chennai,Adult,,InvalidName|NegativeFare
+2141,",",twenty,f,B01,RT4,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2142,Sakshi Sharma,113,F,B02,RT4,2024-04-09,589,CONFIRMED,Hyderabad-Goa,,Medium,InvalidAgeRange
+2143,Ashok Singh,104,m,B02,RT6,2024-05-07,649,CONFIRMED,Ahmedabad-Surat,,High,InvalidAgeRange
+2145,Deepa Das,101,f,B03,RT4,2024-06-29,683,CANCELLED,Hyderabad-Goa,,High,InvalidAgeRange
+2150,Priya Gupta,-5,f,B01,RT2,2024-06-13,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
+2155,,-5,m,B06,RT3,2024-06-13,459,CANCELLED,Bangalore-Chennai,,Low,MissingName|InvalidAgeRange
+2161,Raj Jain,111,m,B03,RT3,2024-05-03,402,CONFIRMED,Bangalore-Chennai,,Low,InvalidAgeRange
+2162,Deepa Jain,112,m,B03,RT2,2024-06-30,646,CONFIRMED,Mumbai-Pune,,High,InvalidAgeRange
+2163,Ashok Patel,110,F,B01,RT6,2024-05-03,521,CONFIRMED,Ahmedabad-Surat,,Medium,InvalidAgeRange
+2165,NEHA VERMA  @123,150,F,B02,RT4,2024-04-26,-700,CONFIRMED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|NegativeFare
+2169,Anjali Mehta,twenty,F,B05,RT2,2024-06-05,abc,CANCELLED,Mumbai-Pune,,,InvalidAgeFormat|InvalidFareFormat
+2173,",",-5,M,B06,RT6,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2174,Nitin Patel,twenty,F,B04,RT2,2024-06-04,576,CONFIRMED,Mumbai-Pune,,Medium,InvalidAgeFormat
+2175,Alok Sharma,,f,B05,RT1,2024-05-19,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
+2176,Meena Das,,F,B01,RT4,2024-04-26,abc,CONFIRMED,Hyderabad-Goa,,,InvalidAgeFormat|InvalidFareFormat
+2178,Ankit Patel,-5,f,B04,RT1,2024-06-23,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|InvalidFareFormat
+2180,Ankit Yadav,102,F,B03,RT1,2024-05-28,560,CONFIRMED,Delhi-Jaipur,,Medium,InvalidAgeRange
+2181,Arjun Singh,111,F,B04,RT5,2024-04-28,562,CONFIRMED,Kolkata-Patna,,Medium,InvalidAgeRange
+2182,Kavita Shah,116,m,B05,RT1,2024-05-20,445,CANCELLED,Delhi-Jaipur,,Low,InvalidAgeRange
+2184,",",-5,f,B01,RT4,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2185,Manoj Patel,,m,B05,RT2,2024-05-31,abc,CANCELLED,Mumbai-Pune,,,InvalidAgeFormat|InvalidFareFormat
+2190,RAMESH PATEL  @123,150,F,B02,RT1,2024-06-02,-700,CONFIRMED,Delhi-Jaipur,,,InvalidName|InvalidAgeRange|NegativeFare
+2191,",",twenty,M,B03,RT6,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2192,Divya Verma,105,f,B06,RT5,2024-05-17,565,CANCELLED,Kolkata-Patna,,Medium,InvalidAgeRange
+2199,Prakash Gupta,150,f,B04,RT1,2024-05-04,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
+2202,Ankit Mehta,twenty,M,B04,RT1,2024-06-11,abc,CANCELLED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
+2205,Anjali Shah,150,m,B01,RT6,2024-05-10,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeRange|NegativeFare
+2207,Sneha Jain,,M,B04,RT4,2024-05-04,-700,CONFIRMED,Hyderabad-Goa,,,InvalidAgeFormat|NegativeFare
+2209,Manoj Das,-5,f,B01,RT6,2024-04-25,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeRange|InvalidFareFormat
+2210,Nitin Malhotra,115,F,B03,RT3,2024-04-20,437,CONFIRMED,Bangalore-Chennai,,Low,InvalidAgeRange
+2214,Anita Sharma,103,M,B03,RT3,2024-05-02,630,CONFIRMED,Bangalore-Chennai,,High,InvalidAgeRange
+2216,Karan Singh@123,80,F,B01,RT2,2024-04-09,506,CONFIRMED,Mumbai-Pune,Senior,Medium,InvalidName
+2217,Sunil Gupta,105,M,B05,RT3,2024-05-13,514,CONFIRMED,Bangalore-Chennai,,Medium,InvalidAgeRange
+2221,Mohan Singh,112,M,B04,RT5,2024-04-11,590,CANCELLED,Kolkata-Patna,,Medium,InvalidAgeRange
+2224,Ankit Malhotra,112,f,B06,RT5,2024-04-30,697,CONFIRMED,Kolkata-Patna,,High,InvalidAgeRange
+2228,Divya Mehta,-5,M,B05,RT5,2024-04-14,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
+2230,Rahul Verma,twenty,F,B02,RT1,2024-05-27,abc,CANCELLED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
+2231,Reena Malhotra,105,m,B03,RT2,2024-05-30,545,CANCELLED,Mumbai-Pune,,Medium,InvalidAgeRange
+2232,Alok Gupta,101,M,B01,RT1,2024-04-14,405,CONFIRMED,Delhi-Jaipur,,Low,InvalidAgeRange
+2233,Suresh Gupta,104,M,B04,RT3,2024-04-13,675,CANCELLED,Bangalore-Chennai,,High,InvalidAgeRange
+2235,Simran Gupta,-5,f,B05,RT5,2024-05-18,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
+2236,Deepa Das,114,m,B06,RT3,2024-05-30,443,CONFIRMED,Bangalore-Chennai,,Low,InvalidAgeRange
+2237,,-5,M,B02,RT1,2024-04-13,425,CANCELLED,Delhi-Jaipur,,Low,MissingName|InvalidAgeRange
+2238,ARJUN SINGH  @123,150,M,B04,RT1,2024-06-15,-700,CONFIRMED,Delhi-Jaipur,,,InvalidName|InvalidAgeRange|NegativeFare
+2244,Meena Malhotra,twenty,F,B01,RT1,2024-06-03,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
+2246,Priyanka Gupta,-5,F,B06,RT3,2024-05-06,569,CONFIRMED,Bangalore-Chennai,,Medium,InvalidAgeRange
+2248,Amit Mehta,-5,f,B04,RT2,2024-06-28,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
+2250,GAURAV SHARMA  @123,150,F,B02,RT4,2024-06-15,-700,CONFIRMED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|NegativeFare
+2259,Karan Arora,113,f,B04,RT5,2024-04-27,642,CANCELLED,Kolkata-Patna,,High,InvalidAgeRange
+2262,Alok Gupta,111,M,B06,RT4,2024-05-27,589,CONFIRMED,Hyderabad-Goa,,Medium,InvalidAgeRange
+2264,Ashok Jain@123,150,m,B01,RT4,2024-05-27,592,CONFIRMED,Hyderabad-Goa,,Medium,InvalidName|InvalidAgeRange
+2272,Rahul Kumar,twenty,F,B06,RT5,2024-06-30,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
+2274,",",,M,B06,RT1,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2276,Anita Malhotra,twenty,F,B04,RT4,2024-06-16,638,CONFIRMED,Hyderabad-Goa,,High,InvalidAgeFormat
+2284,,-5,M,B05,RT2,2024-05-05,423,CANCELLED,Mumbai-Pune,,Low,MissingName|InvalidAgeRange
+2285,Neeraj Singh,-5,m,B04,RT5,2024-05-18,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
+2291,Karan Jain,-5,M,B05,RT5,2024-05-04,570,CONFIRMED,Kolkata-Patna,,Medium,InvalidAgeRange
+2292,Neeraj Jain,150,m,B01,RT3,2024-05-29,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|InvalidFareFormat
+2294,Sachin Yadav,,M,B06,RT1,2024-06-28,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
+2295,Ritu Patel,twenty,F,B04,RT2,2024-04-19,633,CANCELLED,Mumbai-Pune,,High,InvalidAgeFormat
+2297,NITIN GUPTA  @123,150,M,B01,RT6,2024-05-17,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidName|InvalidAgeRange|NegativeFare
+2298,RAMESH JAIN  @123,150,F,B03,RT5,2024-04-20,-700,CONFIRMED,Kolkata-Patna,,,InvalidName|InvalidAgeRange|NegativeFare
+2305,",",twenty,M,B05,RT1,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2307,Aarti Patel,150,f,B03,RT4,2024-05-18,-700,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|NegativeFare
+2311,Lata Shah,105,M,B05,RT2,2024-06-26,607,CONFIRMED,Mumbai-Pune,,High,InvalidAgeRange
+2312,Arjun Das,twenty,F,B06,RT6,2024-06-05,abc,CANCELLED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
+2313,Mohan Verma,,F,B01,RT1,2024-06-19,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
+2318,Arjun Kumar,-5,M,B06,RT4,2024-04-06,abc,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|InvalidFareFormat
+2320,Reena Gupta,,m,B01,RT6,2024-04-23,abc,CANCELLED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
+2326,Alok Malhotra,twenty,F,B01,RT6,2024-05-08,533,CANCELLED,Ahmedabad-Surat,,Medium,InvalidAgeFormat
+2327,Ramesh Gupta,105,m,B02,RT3,2024-05-23,454,CANCELLED,Bangalore-Chennai,,Low,InvalidAgeRange
+2331,",",twenty,M,B05,RT1,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2334,Reena Gupta,117,M,B03,RT2,2024-05-24,579,CANCELLED,Mumbai-Pune,,Medium,InvalidAgeRange
+2335,,-5,M,B03,RT5,2024-05-10,568,CANCELLED,Kolkata-Patna,,Medium,MissingName|InvalidAgeRange
+2336,Gaurav Yadav@123,150,m,B03,RT4,2024-04-14,abc,CONFIRMED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|InvalidFareFormat
+2337,MOHAN PATEL  @123,150,F,B03,RT3,2024-04-30,-700,CONFIRMED,Bangalore-Chennai,,,InvalidName|InvalidAgeRange|NegativeFare
+2339,Rohit Patel,104,M,B06,RT4,2024-05-30,595,CONFIRMED,Hyderabad-Goa,,Medium,InvalidAgeRange
+2340,Vikas Arora@123,150,m,B06,RT6,2024-04-17,454,CONFIRMED,Ahmedabad-Surat,,Low,InvalidName|InvalidAgeRange
+2343,Ritu Das,115,m,B03,RT6,2024-04-14,650,CANCELLED,Ahmedabad-Surat,,High,InvalidAgeRange
+2346,NEHA SHAH  @123,150,F,B04,RT2,2024-05-08,-700,CONFIRMED,Mumbai-Pune,,,InvalidName|InvalidAgeRange|NegativeFare
+2347,Priyanka Kumar,-5,f,B04,RT4,2024-05-10,-700,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|NegativeFare
+2348,Nitin Malhotra,,m,B05,RT3,2024-05-02,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeFormat|InvalidFareFormat
+2357,Simran Singh,111,F,B03,RT6,2024-04-17,443,CONFIRMED,Ahmedabad-Surat,,Low,InvalidAgeRange
+2359,Raj Sharma,110,M,B03,RT5,2024-06-02,447,CONFIRMED,Kolkata-Patna,,Low,InvalidAgeRange
+2366,Raj Malhotra,150,f,B02,RT2,2024-06-13,461,CONFIRMED,Mumbai-Pune,,Low,InvalidAgeRange
+2369,Suresh Shah,twenty,F,B06,RT1,2024-06-06,abc,CANCELLED,Delhi-Jaipur,,,InvalidAgeFormat|InvalidFareFormat
+2370,Alok Arora,-5,f,B01,RT1,2024-04-26,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|InvalidFareFormat
+2380,Vikas Kapoor,112,m,B06,RT3,2024-05-15,599,CANCELLED,Bangalore-Chennai,,Medium,InvalidAgeRange
+2381,Vivek Mehta,twenty,F,B06,RT2,2024-06-29,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeFormat|InvalidFareFormat
+2382,Sachin Shah,,F,B04,RT4,2024-06-17,abc,CONFIRMED,Hyderabad-Goa,,,InvalidAgeFormat|InvalidFareFormat
+2383,Alok Sharma,-5,m,B05,RT1,2024-05-18,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
+2385,Mohan Patel,150,f,B06,RT4,2024-06-14,abc,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|InvalidFareFormat
+2386,Simran Singh,109,m,B06,RT1,2024-05-07,589,CANCELLED,Delhi-Jaipur,,Medium,InvalidAgeRange
+2389,Nitin Sharma,106,F,B03,RT5,2024-04-22,442,CONFIRMED,Kolkata-Patna,,Low,InvalidAgeRange
+2390,Karan Malhotra,101,f,B05,RT2,2024-05-06,423,CONFIRMED,Mumbai-Pune,,Low,InvalidAgeRange
+2393,Deepa Kapoor,107,f,B04,RT2,2024-05-28,667,CONFIRMED,Mumbai-Pune,,High,InvalidAgeRange
+2394,Meena Shah,150,m,B03,RT4,2024-06-14,-700,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|NegativeFare
+2395,Ritu Jain,-5,M,B04,RT4,2024-04-27,abc,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|InvalidFareFormat
+2396,Prakash Kumar,118,m,B04,RT5,2024-04-06,595,CANCELLED,Kolkata-Patna,,Medium,InvalidAgeRange
+2398,Ramesh Das,114,m,B04,RT1,2024-06-22,435,CANCELLED,Delhi-Jaipur,,Low,InvalidAgeRange
+2400,Anjali Arora,119,m,B01,RT3,2024-05-15,432,CANCELLED,Bangalore-Chennai,,Low,InvalidAgeRange
+2401,Ankit Gupta,150,f,B02,RT2,2024-04-21,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
+2403,Payal Shah,107,M,B03,RT6,2024-04-24,410,CANCELLED,Ahmedabad-Surat,,Low,InvalidAgeRange
+2406,Priyanka Singh,112,F,B01,RT4,2024-04-04,572,CANCELLED,Hyderabad-Goa,,Medium,InvalidAgeRange
+2409,Lata Kumar,107,f,B01,RT5,2024-05-22,566,CANCELLED,Kolkata-Patna,,Medium,InvalidAgeRange
+2410,ANKIT SINGH  @123,150,M,B01,RT5,2024-04-15,-700,CONFIRMED,Kolkata-Patna,,,InvalidName|InvalidAgeRange|NegativeFare
+2411,Pooja Arora@123,150,m,B05,RT3,2024-04-14,abc,CONFIRMED,Bangalore-Chennai,,,InvalidName|InvalidAgeRange|InvalidFareFormat
+2417,Reena Malhotra@123,-5,F,B06,RT4,2024-04-17,abc,CONFIRMED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|InvalidFareFormat
+2418,Simran Kumar,-5,F,B05,RT5,2024-05-10,639,CONFIRMED,Kolkata-Patna,,High,InvalidAgeRange
+2419,Kavita Das,-5,M,B02,RT5,2024-04-07,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|InvalidFareFormat
+2423,Arjun Patel,106,f,B02,RT5,2024-04-14,548,CONFIRMED,Kolkata-Patna,,Medium,InvalidAgeRange
+2426,Deepa Gupta,108,m,B03,RT2,2024-04-03,572,CONFIRMED,Mumbai-Pune,,Medium,InvalidAgeRange
+2427,Ramesh Mehta,-5,F,B04,RT5,2024-06-03,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|InvalidFareFormat
+2428,ANKIT SINGH  @123,150,M,B03,RT2,2024-05-23,-700,CONFIRMED,Mumbai-Pune,,,InvalidName|InvalidAgeRange|NegativeFare
+2430,Ritu Gupta,,m,B03,RT1,2024-04-05,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|NegativeFare
+2432,NEERAJ YADAV  @123,150,M,B06,RT1,2024-05-28,-700,CONFIRMED,Delhi-Jaipur,,,InvalidName|InvalidAgeRange|NegativeFare
+2436,Sneha Kapoor,150,m,B05,RT2,2024-04-08,abc,CANCELLED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
+2442,REENA SHARMA  @123,150,F,B03,RT1,2024-04-06,-700,CONFIRMED,Delhi-Jaipur,,,InvalidName|InvalidAgeRange|NegativeFare
+2443,PRAKASH ARORA  @123,150,F,B05,RT6,2024-05-28,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidName|InvalidAgeRange|NegativeFare
+2446,Rohit Malhotra,103,m,B06,RT4,2024-06-17,499,CANCELLED,Hyderabad-Goa,,Low,InvalidAgeRange
+2452,Kavita Kapoor,,M,B04,RT3,2024-05-29,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeFormat|InvalidFareFormat
+2454,Sneha Jain,114,F,B04,RT1,2024-06-07,436,CANCELLED,Delhi-Jaipur,,Low,InvalidAgeRange
+2455,Manoj Mehta,120,f,B03,RT3,2024-04-10,631,CONFIRMED,Bangalore-Chennai,,High,InvalidAgeRange
+2459,Deepa Patel@123,-5,m,B03,RT5,2024-04-17,483,CANCELLED,Kolkata-Patna,,Low,InvalidName|InvalidAgeRange
+2461,Neeraj Jain,105,F,B05,RT2,2024-04-02,608,CONFIRMED,Mumbai-Pune,,High,InvalidAgeRange
+2462,Prakash Jain,119,F,B04,RT3,2024-04-12,571,CONFIRMED,Bangalore-Chennai,,Medium,InvalidAgeRange
+2463,Rahul Verma,118,M,B06,RT2,2024-06-04,491,CONFIRMED,Mumbai-Pune,,Low,InvalidAgeRange
+2469,Lata Arora,114,m,B02,RT3,2024-05-15,530,CONFIRMED,Bangalore-Chennai,,Medium,InvalidAgeRange
+2473,NITIN VERMA  @123,150,M,B03,RT4,2024-05-09,-700,CONFIRMED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|NegativeFare
+2474,Ashok Singh,150,f,B06,RT2,2024-05-04,-700,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|NegativeFare
+2481,Anita Mehta,119,f,B05,RT3,2024-06-27,665,CANCELLED,Bangalore-Chennai,,High,InvalidAgeRange
+2484,Sunil Arora,150,f,B03,RT3,2024-05-12,-700,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|NegativeFare
+2487,Kavita Patel,150,f,B02,RT2,2024-05-04,-700,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|NegativeFare
+2491,Pooja Mehta,118,m,B05,RT3,2024-04-08,583,CONFIRMED,Bangalore-Chennai,,Medium,InvalidAgeRange
+2493,Priyanka Yadav,111,m,B04,RT2,2024-05-12,449,CONFIRMED,Mumbai-Pune,,Low,InvalidAgeRange
+2494,NITIN VERMA  @123,150,F,B04,RT4,2024-06-22,-700,CONFIRMED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|NegativeFare
+2495,Neeraj Mehta,,M,B04,RT3,2024-06-08,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeFormat|InvalidFareFormat
+2496,,-5,m,B06,RT2,2024-05-17,619,CANCELLED,Mumbai-Pune,,High,MissingName|InvalidAgeRange
+2498,Ritu Mehta,111,F,B05,RT4,2024-05-21,491,CANCELLED,Hyderabad-Goa,,Low,InvalidAgeRange
+2499,Payal Yadav,114,m,B04,RT3,2024-05-25,420,CANCELLED,Bangalore-Chennai,,Low,InvalidAgeRange
+2500,Divya Gupta,,M,B04,RT3,2024-05-28,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeFormat|InvalidFareFormat
+2502,Arjun Das,108,f,B01,RT6,2024-05-16,540,CONFIRMED,Ahmedabad-Surat,,Medium,InvalidAgeRange
+2504,Pooja Yadav,116,f,B03,RT2,2024-05-28,600,CONFIRMED,Mumbai-Pune,,Medium,InvalidAgeRange
+2509,Ankit Kapoor@123,-5,F,B04,RT4,2024-04-09,abc,CANCELLED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|InvalidFareFormat
+2511,Karan Gupta,150,m,B05,RT1,2024-04-13,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|InvalidFareFormat
+2513,Priya Das,106,m,B06,RT2,2024-06-11,507,CANCELLED,Mumbai-Pune,,Medium,InvalidAgeRange
+2515,Ritu Das,110,m,B05,RT5,2024-05-20,431,CANCELLED,Kolkata-Patna,,Low,InvalidAgeRange
+2517,Sachin Das,-5,M,B03,RT2,2024-05-16,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
+2518,Sachin Sharma,118,M,B04,RT5,2024-04-14,623,CANCELLED,Kolkata-Patna,,High,InvalidAgeRange
+2523,Prakash Patel,102,M,B03,RT1,2024-04-27,675,CANCELLED,Delhi-Jaipur,,High,InvalidAgeRange
+2527,Ramesh Sharma@123,-5,F,B04,RT1,2024-05-27,491,CONFIRMED,Delhi-Jaipur,,Low,InvalidName|InvalidAgeRange
+2529,Rohit Gupta@123,150,m,B03,RT5,2024-04-01,-700,CONFIRMED,Kolkata-Patna,,,InvalidName|InvalidAgeRange|NegativeFare
+2531,Vivek Jain,111,f,B06,RT4,2024-05-05,407,CANCELLED,Hyderabad-Goa,,Low,InvalidAgeRange
+2535,Ashok Gupta,150,F,B03,RT2,2024-06-06,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
+2539,Neha Gupta,150,m,B05,RT2,2024-06-30,-700,CANCELLED,Mumbai-Pune,,,InvalidAgeRange|NegativeFare
+2543,Alok Verma,110,F,B05,RT2,2024-06-24,572,CANCELLED,Mumbai-Pune,,Medium,InvalidAgeRange
+2544,Neha Jain,110,M,B03,RT2,2024-04-02,629,CANCELLED,Mumbai-Pune,,High,InvalidAgeRange
+2545,Priya Jain,115,F,B06,RT1,2024-05-21,611,CANCELLED,Delhi-Jaipur,,High,InvalidAgeRange
+2550,,-5,m,B05,RT3,2024-04-12,604,CANCELLED,Bangalore-Chennai,,High,MissingName|InvalidAgeRange
+2553,Ashok Singh,117,M,B05,RT6,2024-06-28,499,CONFIRMED,Ahmedabad-Surat,,Low,InvalidAgeRange
+2561,Raj Verma,-5,f,B02,RT2,2024-05-10,-700,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|NegativeFare
+2563,Arjun Malhotra,117,m,B04,RT4,2024-05-20,672,CANCELLED,Hyderabad-Goa,,High,InvalidAgeRange
+2564,Kavita Singh,-5,f,B05,RT4,2024-04-05,487,CONFIRMED,Hyderabad-Goa,,Low,InvalidAgeRange
+2565,Ankit Jain@123,150,m,B01,RT6,2024-04-14,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidName|InvalidAgeRange|NegativeFare
+2567,Sunil Kapoor@123,61,m,B01,RT3,2024-04-09,-700,CONFIRMED,Bangalore-Chennai,Senior,,InvalidName|NegativeFare
+2568,Rohit Das,150,m,B01,RT2,2024-06-01,abc,CANCELLED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
+2569,Ankit Singh,twenty,M,B02,RT5,2024-06-06,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
+2570,AARTI GUPTA  @123,150,M,B02,RT5,2024-04-18,-700,CONFIRMED,Kolkata-Patna,,,InvalidName|InvalidAgeRange|NegativeFare
+2573,Lata Singh,-5,M,B04,RT4,2024-05-04,528,CONFIRMED,Hyderabad-Goa,,Medium,InvalidAgeRange
+2574,Arjun Sharma,108,f,B05,RT4,2024-05-23,420,CONFIRMED,Hyderabad-Goa,,Low,InvalidAgeRange
+2579,Divya Gupta,-5,m,B01,RT1,2024-05-18,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
+2580,Ashok Gupta,106,F,B04,RT6,2024-06-20,670,CONFIRMED,Ahmedabad-Surat,,High,InvalidAgeRange
+2581,,-5,M,B02,RT6,2024-05-24,417,CANCELLED,Ahmedabad-Surat,,Low,MissingName|InvalidAgeRange
+2587,Ritu Mehta,111,F,B02,RT5,2024-04-23,631,CONFIRMED,Kolkata-Patna,,High,InvalidAgeRange
+2588,Meena Verma,150,m,B05,RT2,2024-06-20,-700,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|NegativeFare
+2591,Simran Das@123,150,m,B06,RT5,2024-04-17,599,CANCELLED,Kolkata-Patna,,Medium,InvalidName|InvalidAgeRange
+2594,Sachin Gupta,150,f,B01,RT1,2024-06-17,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
+2596,Neeraj Singh,,M,B04,RT6,2024-05-16,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
+2600,Karan Kapoor,112,m,B04,RT1,2024-04-30,471,CANCELLED,Delhi-Jaipur,,Low,InvalidAgeRange
+2604,Lata Sharma,101,m,B02,RT3,2024-06-15,585,CANCELLED,Bangalore-Chennai,,Medium,InvalidAgeRange
+2606,Pooja Gupta@123,47,F,B05,RT5,2024-04-14,abc,CANCELLED,Kolkata-Patna,Adult,,InvalidName|InvalidFareFormat
+2607,Sakshi Patel,108,F,B04,RT3,2024-06-05,603,CANCELLED,Bangalore-Chennai,,High,InvalidAgeRange
+2608,Ashok Shah,-5,F,B06,RT3,2024-06-21,538,CONFIRMED,Bangalore-Chennai,,Medium,InvalidAgeRange
+2614,SNEHA MALHOTRA  @123,150,M,B06,RT6,2024-06-04,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidName|InvalidAgeRange|NegativeFare
+2624,Sunil Verma,104,f,B03,RT1,2024-04-20,560,CONFIRMED,Delhi-Jaipur,,Medium,InvalidAgeRange
+2625,Simran Singh@123,-5,m,B05,RT1,2024-04-09,521,CONFIRMED,Delhi-Jaipur,,Medium,InvalidName|InvalidAgeRange
+2626,,-5,m,B02,RT3,2024-05-15,589,CANCELLED,Bangalore-Chennai,,Medium,MissingName|InvalidAgeRange
+2629,Gaurav Gupta,-5,m,B03,RT6,2024-05-10,-700,CONFIRMED,Ahmedabad-Surat,,,InvalidAgeRange|NegativeFare
+2636,Deepa Shah,150,m,B04,RT2,2024-05-17,-700,CANCELLED,Mumbai-Pune,,,InvalidAgeRange|NegativeFare
+2644,Ramesh Jain@123,10,F,B05,RT3,2024-04-17,abc,CONFIRMED,Bangalore-Chennai,Minor,,InvalidName|InvalidFareFormat
+2645,Vikas Mehta,150,m,B02,RT5,2024-06-08,523,CANCELLED,Kolkata-Patna,,Medium,InvalidAgeRange
+2647,Manoj Kumar,,F,B02,RT2,2024-04-13,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeFormat|InvalidFareFormat
+2648,Nitin Patel,109,f,B03,RT1,2024-06-19,494,CONFIRMED,Delhi-Jaipur,,Low,InvalidAgeRange
+2650,Priyanka Mehta,-5,m,B03,RT2,2024-04-19,538,CONFIRMED,Mumbai-Pune,,Medium,InvalidAgeRange
+2655,Ramesh Gupta@123,26,m,B04,RT1,2024-04-17,-700,CONFIRMED,Delhi-Jaipur,Adult,,InvalidName|NegativeFare
+2661,Ritu Malhotra,-5,m,B03,RT5,2024-04-25,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
+2662,Nitin Kumar,118,F,B02,RT6,2024-06-12,419,CONFIRMED,Ahmedabad-Surat,,Low,InvalidAgeRange
+2663,Alok Sharma,,m,B04,RT2,2024-05-04,abc,CANCELLED,Mumbai-Pune,,,InvalidAgeFormat|InvalidFareFormat
+2665,Payal Kapoor,150,f,B02,RT4,2024-04-13,abc,CONFIRMED,Hyderabad-Goa,,,InvalidAgeRange|InvalidFareFormat
+2669,Kavita Verma,150,m,B04,RT1,2024-04-20,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
+2670,Anita Shah,109,f,B04,RT1,2024-04-27,500,CANCELLED,Delhi-Jaipur,,Medium,InvalidAgeRange
+2672,Deepa Gupta,twenty,F,B02,RT3,2024-05-06,600,CONFIRMED,Bangalore-Chennai,,Medium,InvalidAgeFormat
+2674,Prakash Kapoor,-5,f,B02,RT3,2024-05-04,-700,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|NegativeFare
+2675,Pooja Gupta,twenty,M,B05,RT4,2024-06-13,679,CONFIRMED,Hyderabad-Goa,,High,InvalidAgeFormat
+2677,Ankit Das,twenty,F,B04,RT4,2024-05-03,abc,CANCELLED,Hyderabad-Goa,,,InvalidAgeFormat|InvalidFareFormat
+2679,Neeraj Sharma,118,m,B05,RT2,2024-05-27,589,CANCELLED,Mumbai-Pune,,Medium,InvalidAgeRange
+2682,Aarti Yadav,,M,B04,RT3,2024-05-06,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeFormat|InvalidFareFormat
+2683,",",,f,B04,RT1,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2685,Rahul Mehta,113,M,B02,RT4,2024-04-30,593,CANCELLED,Hyderabad-Goa,,Medium,InvalidAgeRange
+2686,Lata Kapoor,102,M,B05,RT5,2024-04-13,495,CANCELLED,Kolkata-Patna,,Low,InvalidAgeRange
+2687,Sunil Malhotra,twenty,M,B04,RT2,2024-06-08,668,CONFIRMED,Mumbai-Pune,,High,InvalidAgeFormat
+2693,GAURAV JAIN  @123,150,F,B03,RT4,2024-06-11,-700,CONFIRMED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|NegativeFare
+2696,Lata Singh,150,f,B02,RT1,2024-05-06,567,CONFIRMED,Delhi-Jaipur,,Medium,InvalidAgeRange
+2698,Reena Singh@123,16,F,B05,RT1,2024-04-09,abc,CANCELLED,Delhi-Jaipur,Minor,,InvalidName|InvalidFareFormat
+2699,",",twenty,M,B05,RT6,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2700,Amit Patel,150,m,B02,RT4,2024-05-14,432,CONFIRMED,Hyderabad-Goa,,Low,InvalidAgeRange
+2702,Ritu Mehta,-5,F,B01,RT1,2024-04-08,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|InvalidFareFormat
+2703,Kavita Verma,150,m,B02,RT3,2024-06-18,406,CONFIRMED,Bangalore-Chennai,,Low,InvalidAgeRange
+2707,Aarti Gupta,-5,f,B05,RT2,2024-05-03,-700,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|NegativeFare
+2710,",",,M,B03,RT3,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2711,Aarti Shah,twenty,M,B06,RT3,2024-06-16,495,CONFIRMED,Bangalore-Chennai,,Low,InvalidAgeFormat
+2715,Simran Singh,150,f,B05,RT5,2024-04-29,-700,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|NegativeFare
+2717,Meena Verma,twenty,F,B03,RT2,2024-05-16,510,CONFIRMED,Mumbai-Pune,,Medium,InvalidAgeFormat
+2718,Priyanka Yadav,twenty,F,B03,RT4,2024-06-05,678,CONFIRMED,Hyderabad-Goa,,High,InvalidAgeFormat
+2719,Aarti Das,,M,B02,RT1,2024-04-04,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeFormat|NegativeFare
+2724,,-5,M,B05,RT2,2024-05-08,626,CANCELLED,Mumbai-Pune,,High,MissingName|InvalidAgeRange
+2725,Payal Jain,116,f,B05,RT5,2024-04-13,417,CONFIRMED,Kolkata-Patna,,Low,InvalidAgeRange
+2728,Ashok Malhotra,150,m,B05,RT2,2024-05-04,-700,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|NegativeFare
+2729,Arjun Singh,114,f,B05,RT3,2024-06-01,487,CONFIRMED,Bangalore-Chennai,,Low,InvalidAgeRange
+2730,Vivek Verma,109,f,B04,RT6,2024-06-10,509,CONFIRMED,Ahmedabad-Surat,,Medium,InvalidAgeRange
+2732,Simran Gupta,150,f,B01,RT3,2024-05-10,-700,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|NegativeFare
+2735,Vikas Yadav,-5,F,B06,RT3,2024-05-15,abc,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|InvalidFareFormat
+2737,Sunil Patel@123,-5,m,B01,RT1,2024-04-14,-700,CANCELLED,Delhi-Jaipur,,,InvalidName|InvalidAgeRange|NegativeFare
+2739,Anita Verma,119,f,B02,RT3,2024-05-19,626,CANCELLED,Bangalore-Chennai,,High,InvalidAgeRange
+2740,Anjali Sharma,twenty,M,B03,RT3,2024-05-18,656,CONFIRMED,Bangalore-Chennai,,High,InvalidAgeFormat
+2742,RAHUL PATEL  @123,150,F,B02,RT4,2024-06-16,-700,CONFIRMED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|NegativeFare
+2745,Ashok Gupta,113,m,B02,RT2,2024-06-18,645,CANCELLED,Mumbai-Pune,,High,InvalidAgeRange
+2749,Alok Kumar,,f,B02,RT5,2024-04-13,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeFormat|InvalidFareFormat
+2753,Anita Kapoor,104,F,B06,RT3,2024-06-10,416,CONFIRMED,Bangalore-Chennai,,Low,InvalidAgeRange
+2754,Arjun Yadav,150,f,B05,RT3,2024-05-06,-700,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|NegativeFare
+2755,",",twenty,M,B03,RT3,13/04/24,abc,,,,InvalidName|InvalidAgeFormat|InvalidFareFormat|InvalidDateFormat|InvalidStatus|UnknownRouteCode
+2758,Priyanka Kapoor@123,-5,m,B05,RT6,2024-04-17,abc,CONFIRMED,Ahmedabad-Surat,,,InvalidName|InvalidAgeRange|InvalidFareFormat
+2759,Payal Patel,-5,f,B04,RT2,2024-04-04,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
+2763,Manoj Kapoor,150,F,B02,RT2,2024-06-17,abc,CONFIRMED,Mumbai-Pune,,,InvalidAgeRange|InvalidFareFormat
+2764,Anita Das,110,f,B02,RT6,2024-04-18,508,CONFIRMED,Ahmedabad-Surat,,Medium,InvalidAgeRange
+2766,Sunil Verma,105,F,B01,RT4,2024-04-07,496,CANCELLED,Hyderabad-Goa,,Low,InvalidAgeRange
+2767,Deepa Yadav,115,F,B04,RT3,2024-06-21,605,CONFIRMED,Bangalore-Chennai,,High,InvalidAgeRange
+2769,Rahul Gupta,-5,m,B04,RT5,2024-05-22,abc,CONFIRMED,Kolkata-Patna,,,InvalidAgeRange|InvalidFareFormat
+2770,Neha Kumar,150,f,B03,RT1,2024-05-18,abc,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|InvalidFareFormat
+2773,Mehul Arora,106,F,B02,RT5,2024-04-09,603,CANCELLED,Kolkata-Patna,,High,InvalidAgeRange
+2775,Deepa Kapoor,150,m,B01,RT1,2024-05-10,-700,CONFIRMED,Delhi-Jaipur,,,InvalidAgeRange|NegativeFare
+2778,Divya Yadav,-5,m,B05,RT5,2024-05-09,686,CONFIRMED,Kolkata-Patna,,High,InvalidAgeRange
+2780,Ritu Verma,118,f,B01,RT1,2024-05-17,658,CONFIRMED,Delhi-Jaipur,,High,InvalidAgeRange
+2781,NEHA YADAV  @123,150,F,B03,RT4,2024-06-02,-700,CONFIRMED,Hyderabad-Goa,,,InvalidName|InvalidAgeRange|NegativeFare
+2782,Prakash Das,115,F,B06,RT6,2024-05-30,514,CONFIRMED,Ahmedabad-Surat,,Medium,InvalidAgeRange
+2786,Manoj Sharma@123,21,F,B03,RT2,2024-04-09,abc,CONFIRMED,Mumbai-Pune,Adult,,InvalidName|InvalidFareFormat
+2790,Sakshi Mehta,106,M,B04,RT2,2024-06-16,403,CONFIRMED,Mumbai-Pune,,Low,InvalidAgeRange
+2791,Manoj Gupta,104,F,B02,RT1,2024-06-24,651,CONFIRMED,Delhi-Jaipur,,High,InvalidAgeRange
+2793,Amit Gupta,,M,B02,RT6,2024-06-20,abc,CANCELLED,Ahmedabad-Surat,,,InvalidAgeFormat|InvalidFareFormat
+2794,Karan Gupta,150,f,B01,RT3,2024-05-27,-700,CONFIRMED,Bangalore-Chennai,,,InvalidAgeRange|NegativeFare
+2797,Divya Gupta,103,M,B03,RT3,2024-05-21,402,CONFIRMED,Bangalore-Chennai,,Low,InvalidAgeRange

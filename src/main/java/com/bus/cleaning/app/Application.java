@@ -74,10 +74,8 @@ public class Application {
         List<Booking> uniqueValid = dup.removeDuplicates(valid);
 
         logger.info("Valid after de-dup: {}", uniqueValid.size());
-
-        // ==============================       
+     
         // STEP 4: SAVE TO DATABASE
-        // ==============================
         if (cfg.dbEnabled) {
 
             logger.info("DB ENABLED - Saving records");
@@ -103,9 +101,8 @@ public class Application {
             logger.info("Database operations completed successfully");
         }
 
-        // ==============================       
+      
         // STEP 5: WRITE OUTPUT FILES
-        // ==============================
         writer.writeCleaned(cfg.cleanedPath, uniqueValid);
         writer.writeRejected(cfg.rejectedPath, invalid);
 

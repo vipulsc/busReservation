@@ -12,3 +12,5 @@ Thumbs.db
 target/
 
 /bin/
+
+*.md
