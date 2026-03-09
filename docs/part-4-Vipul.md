@@ -1,7 +1,7 @@
 # Part 4: Ingestion, Derived Data & Writer Contract  
 **For Scrum Master & Stakeholders – Short Intro**
 
-Hello / Good afternoon / Good evening. I am **[Your Name]**.
+Hello / Good afternoon / Good evening. I am **[VIPUL]**.
 
 ---
 

@@ -1,7 +1,7 @@
 # Part 3: Standardization & Mapping Rules  
 **For Scrum Master & Stakeholders – Short Intro**
 
-Hello / Good afternoon / Good evening. I am **[Your Name]**.
+Hello / Good afternoon / Good evening. I am **[SOUVIK]**.
 
 ---
 

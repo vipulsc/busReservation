@@ -1,7 +1,7 @@
 # Part 2: Cleaning Pipeline & Validation Rules  
 **For Scrum Master & Stakeholders – Short Intro**
 
-Hello / Good afternoon / Good evening. I am **[Your Name]**.
+Hello / Good afternoon / Good evening. I am **[NEHA]**.
 
 ---
 

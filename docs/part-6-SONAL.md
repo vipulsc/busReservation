@@ -1,7 +1,7 @@
 # Part 6: Deduplication & Aggregation Services  
 **For Scrum Master & Stakeholders – Short Intro**
 
-Hello / Good afternoon / Good evening. I am **[Your Name]**.
+Hello / Good afternoon / Good evening. I am **[SONAL]**.
 
 ---
 
